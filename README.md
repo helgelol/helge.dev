@@ -1,2 +1,2 @@
 # kubes
-# Just playing around with webslides.
+Just playing around with webslides.
