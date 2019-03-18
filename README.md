@@ -7,7 +7,6 @@ Set up Frontend Container
 - https://hub.docker.com/r/bjornadalno/nginx-rp-letsencrypt
 
 Set up Backend Container
-- ubuntu:bionic
-- With git and nginx
-- git clone kubes from github
+- nginx:stable
 - Put the dockerfile in github.
+- make it work.
