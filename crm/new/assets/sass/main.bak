@@ -234,7 +234,7 @@
 
 		> p {
 			display: block;
-			color: #08486a;
+			color: #f35858;
 			padding: 0.75em 0 1em 0;
 			font-size: 1.5em;
 			line-height: 1.5em;
@@ -635,7 +635,7 @@
 		padding: 4em 0 2em 0;
 		background-image: url('images/header.svg');
 		@include vendor('background-image', ('url("images/overlay.png")', 'url("images/header.svg")', 'linear-gradient(75deg, #FF7088 15%, #F2B69D 55%)'));
-		background-color: #08486a;
+		background-color: #f08c89;
 		background-size: 100% 620%;
 		background-size: 128px 128px, 100% 620%, auto;
 		background-repeat: repeat, no-repeat, no-repeat;
