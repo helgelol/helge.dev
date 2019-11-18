@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2feef05-629c-46b4-90e3-8f80002b7d87/deploy-status)](https://app.netlify.com/sites/kubes/deploys)
 # kubes
 Just playing around with webslides.
 
