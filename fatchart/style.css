@@ -1,16 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(193, 139, 58);
-    font-family: sans-serif;
+    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
     color: white;
 }

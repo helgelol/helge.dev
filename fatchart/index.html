@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Fatchart</title>
 </head>
 <body>
-    <h1>THE ONE AND ONLY FATCHART</h1>
+    <h1 class="text-3xl">THE ONE AND ONLY FATCHART</h1>
     <em>For motivational reasons, of course.</em>
-    <canvas id="myChart"></canvas>
+    
+    <div class="rounded-lg w-5/6 bg-white mt-4 shadow"><canvas id="myChart"></canvas></div>
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -21,13 +23,13 @@ var chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['14. April', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+        labels: ['14. April', '15. April', '19. April', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
         datasets: [{
             label: 'Helge',
             fill: false,
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0,]
+            data: [86.2,]
         },
         {
             label: 'Marius',
@@ -41,7 +43,7 @@ var chart = new Chart(ctx, {
             fill: false,
             backgroundColor: 'rgb(123, 4, 132)',
             borderColor: 'rgb(123, 4, 132)',
-            data: [0,]
+            data: [83.4,]
         }
         ]
     },
