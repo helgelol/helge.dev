@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Fatchart</title>
+</head>
+<body>
+    <h1>THE ONE AND ONLY FATCHART</h1>
+    <em>For motivational reasons, of course.</em>
+    <canvas id="myChart"></canvas>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['14. April', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'],
+        datasets: [{
+            label: 'Helge',
+            fill: false,
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0,]
+        },
+        {
+            label: 'Marius',
+            fill: false,
+            backgroundColor: 'rgb(123, 99, 200)',
+            borderColor: 'rgb(123, 99, 132)',
+            data: [86.6,]
+        },
+        {
+            label: 'Kristian',
+            fill: false,
+            backgroundColor: 'rgb(123, 4, 132)',
+            borderColor: 'rgb(123, 4, 132)',
+            data: [0,]
+        }
+        ]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+</script>
