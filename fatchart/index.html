@@ -17,7 +17,10 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
+    Chart.defaults.global.defaultFontSize = 14;
+    // Chart.defaults.global.defaultFontColor = 'black';
+    
+    var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'line',
 
@@ -44,7 +47,15 @@ var chart = new Chart(ctx, {
             backgroundColor: 'rgb(100, 50, 200)',
             borderColor: 'rgb(100, 50, 200)',
             data: [83.4, 83.1, ]
+        },
+        {
+            label: '',
+            fill: false,
+            backgroundColor: '',
+            borderColor: '',
+            data: [87, 86.5, 86, 85.5, 85, 84.5, 84, 83.5, 83, 82.5, 82, 81.5, 81]
         }
+        
         ]
     },
 
