@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <title>Fatchart</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="text-3xl">THE ONE AND ONLY FATCHART</h1>
     <em>For motivational reasons, of course.</em>
-    
-    <div class="rounded-lg w-5/6 bg-white mt-4 shadow"><canvas id="myChart"></canvas></div>
-</body>
+
+    <div class="rounded-lg w-5/6 bg-white mt-4 shadow">
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    Chart.defaults.global.defaultFontSize = 14;
-    // Chart.defaults.global.defaultFontColor = 'black';
-    
-    var chart = new Chart(ctx, {
+  var ctx = document.getElementById("myChart").getContext("2d");
+  Chart.defaults.global.defaultFontSize = 14;
+  // Chart.defaults.global.defaultFontColor = 'black';
+
+  var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'line',
+    type: "line",
 
     // The data for our dataset
     data: {
-        labels: ['15. April', '19. April', '26. April', '3. Mai', '10. Mai', '17. Mai', '24. Mai', '31. Mai', '7. Juni', '14. Juni', '21. Juni', '28. Juni'],
-        datasets: [{
-            label: 'Helge',
-            fill: false,
-            backgroundColor: 'rgb(100, 200, 100)',
-            borderColor: 'rgb(100, 200, 100)',
-            data: [84.8, 84.1, 83.8, 83.6]
+      labels: [
+        "15. April",
+        "19. April",
+        "26. April",
+        "3. Mai",
+        "10. Mai",
+        "17. Mai",
+        "24. Mai",
+        "31. Mai",
+        "7. Juni",
+        "14. Juni",
+        "21. Juni",
+        "28. Juni",
+      ],
+      datasets: [
+        {
+          label: "Helge",
+          fill: false,
+          backgroundColor: "rgb(100, 200, 100)",
+          borderColor: "rgb(100, 200, 100)",
+          data: [84.8, 84.1, 83.8, 83.6, 83.4],
         },
         {
-            label: 'Marius',
-            fill: false,
-            backgroundColor: 'rgb(200, 70, 40)',
-            borderColor: 'rgb(200, 70, 40)',
-            data: [84.9, 85.3, 84.7, 84.6]
+          label: "Marius",
+          fill: false,
+          backgroundColor: "rgb(200, 70, 40)",
+          borderColor: "rgb(200, 70, 40)",
+          data: [84.9, 85.3, 84.7, 84.6, 84.2],
         },
         {
-            label: 'Kristian',
-            fill: false,
-            backgroundColor: 'rgb(100, 50, 200)',
-            borderColor: 'rgb(100, 50, 200)',
-            data: [83.1, 82.82, 82.6, 82.4]
+          label: "Kristian",
+          fill: false,
+          backgroundColor: "rgb(100, 50, 200)",
+          borderColor: "rgb(100, 50, 200)",
+          data: [83.1, 82.82, 82.6, 82.4, 82.1],
         },
         {
-            label: '',
-            fill: false,
-            backgroundColor: '',
-            borderColor: '',
-            data: [86, 85.5, 85, 84.5, 84, 83.5, 83, 82.5, 82, 81.5, 81, 80.5, 80]
-        }
-        
-        ]
+          label: "",
+          fill: false,
+          backgroundColor: "",
+          borderColor: "",
+          data: [
+            86,
+            85.5,
+            85,
+            84.5,
+            84,
+            83.5,
+            83,
+            82.5,
+            82,
+            81.5,
+            81,
+            80.5,
+            80,
+          ],
+        },
+      ],
     },
 
     // Configuration options go here
-    options: {}
-});
+    options: {},
+  });
 </script>
