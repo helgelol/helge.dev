@@ -1,6 +1,7 @@
 .env.production
 .env.development
-/dist
+dist/
+.vscode/
 
 # Logs
 logs
