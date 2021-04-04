@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Information msg="kubes" />
+    <FrontPage />
   </div>
 </template>
 
 <script>
-import Information from "./components/Information.vue";
+import FrontPage from "./components/FrontPage.vue";
 
 export default {
   name: "App",
   components: {
-    Information,
+    FrontPage,
   },
 };
 </script>
@@ -66,18 +66,4 @@ body {
   text-align: center;
   margin-top: 60px;
 }
-/* .fade-block {
-  opacity: 0;
-  animation-delay: 2s;
-  animation: fadein 3s ease;
-  animation-fill-mode: forwards;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 </style>
