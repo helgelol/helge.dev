@@ -6,7 +6,7 @@
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input name="contactFormInput" type="hidden" />
+      <input type="hidden" name="form-name" value="contactForm" />
       <input type="email" name="contactEmail" placeholder="E-mail" />
       <br />
       <input type="text" name="contactText" placeholder="Message" />
