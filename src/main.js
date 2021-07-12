@@ -1,9 +1,10 @@
-import Vue from "vue";
-import App from "./App.vue";
-import "tailwindcss/tailwind.css";
+import App from './App.svelte';
 
-Vue.config.productionTip = false;
+const app = new App({
+	target: document.body,
+	props: {
+		name: 'world'
+	}
+});
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+export default app;
