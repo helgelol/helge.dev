@@ -12,5 +12,11 @@
     <script defer src="/build/bundle.js"></script>
   </head>
 
-  <body></body>
+  <body>
+    <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="contactEmail" />
+      <input type="text" name="contactText" />
+      <button type="submit" name="button">Send</button>
+    </form>
+  </body>
 </html>

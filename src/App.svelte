@@ -18,11 +18,6 @@
 </svelte:head>
 <main>
   <FrontPage />
-  <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
-    <input type="email" name="contactEmail" />
-    <input type="text" name="contactText" />
-    <button type="submit" name="button">Send</button>
-  </form>
 </main>
 
 <style global lang="postcss">
