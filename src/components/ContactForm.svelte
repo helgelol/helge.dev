@@ -3,7 +3,7 @@
 
   import { fade } from 'svelte/transition';
 
-  let isContactOpen = false;
+  export let isContactOpen = false;
 
   function openContact(event) {
     event.stopPropagation();
@@ -30,37 +30,42 @@
       class="fixed inset-0 justify-center items-center overflow-x-hidden overflow-y-auto flex"
     >
       <!-- Blurry background goes here (h-full w-full bg-black) -->
-      <div class="contact-bg p-8 rounded-lg h-full w-full">
-        <div class="flex justify-end">
-          <svg
-            on:click={openContact}
-            class="h-16 w-16 text-white cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+      <div class="h-full w-full modal-wrapper">
+        <div class="modal md:rounded-lg w-full md:w-2/4 h-screen md:h-1/2 mx-auto my-0 md:my-28">
+          <div class="flex justify-end">
+            <svg
+              on:click={openContact}
+              class="h-16 w-16 text-white cursor-pointer pb-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <ContactFormContent />
         </div>
-        <ContactFormContent />
       </div>
     </div>
   {/if}
 </div>
 
 <style>
-  .contact-bg {
+  .modal {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    position: relative;
     animation: change 20s ease-in-out infinite;
+    min-height: 26rem;
+    /* position: relative; */
+    padding: 1rem;
+    /* margin: auto auto; */
   }
 
   .glass-effect {
@@ -80,5 +85,11 @@
     line-height: 2.25rem;
     font-weight: 600;
     border-radius: 0.375rem;
+  }
+  .modal-wrapper {
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    position: fixed;
   }
 </style>

@@ -1,6 +1,6 @@
 <script></script>
 
-<div>
+<div class="">
   <form
     class="w-full"
     name="contactForm"
@@ -45,6 +45,11 @@
 </div>
 
 <style>
+  .contact-bg {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: change 20s ease-in-out infinite;
+  }
   .glass-effect {
     background: linear-gradient(
       to right bottom,
@@ -52,7 +57,6 @@
       rgba(255, 255, 255, 0.3)
     );
   }
-
   .button {
     height: 4rem;
     width: 12rem;
