@@ -11,18 +11,21 @@ build:
     - npm run build
   artifacts:
     paths:
-      - dist
+      - public
 
 deploy:
   stage: deploy
   image:
     name: helgejs/netlify-cli
-    entrypoint: [""]
+    entrypoint: ['']
   script:
     - echo "Deploying site to Netlify"
-    - netlify deploy --auth=$netlifyToken --dir=dist --site=0315c5b3-bb75-4095-aaae-3e77ceae5541 --prod --message="$CI_COMMIT_MESSAGE"
+    - netlify deploy --auth=$netlifyToken --dir=public --site=0315c5b3-bb75-4095-aaae-3e77ceae5541 --prod --message="$CI_COMMIT_MESSAGE"
+  environment:
+    name: Deploy
+    url: https://kubes.no
   artifacts:
     paths:
-      - dist
+      - public
   only:
     - master

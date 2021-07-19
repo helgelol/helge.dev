@@ -1,6 +1,6 @@
 .env.production
 .env.development
-dist/
+public/build/
 .vscode/
 
 # Logs
