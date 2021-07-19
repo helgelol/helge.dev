@@ -29,7 +29,6 @@
       out:fade={{ delay: 100 }}
       class="fixed inset-0 justify-center items-center overflow-x-hidden overflow-y-auto flex"
     >
-      <!-- Blurry background goes here (h-full w-full bg-black) -->
       <div class="h-full w-full modal-wrapper">
         <div class="modal md:rounded-lg w-full md:w-2/4 h-screen md:h-1/2 mx-auto my-0 md:my-28">
           <div class="flex justify-end">
