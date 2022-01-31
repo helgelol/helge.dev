@@ -1,5 +1,7 @@
 # KUBES
 
+[![Deploy](https://github.com/helgelol/kubes/actions/workflows/deploy.yml/badge.svg)](https://github.com/helgelol/kubes/actions/workflows/deploy.yml)
+
 This is a [Svelte](https://svelte.dev) app, with [Tailwind](https://tailwindcss.com/) for styling.  
 Svelte is a lightweight javascript compiler, and only includes used components when built, so it's fast and small.
 
