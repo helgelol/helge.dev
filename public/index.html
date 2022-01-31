@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/build/bundle.css" />
 
     <script defer src="/build/bundle.js"></script>
+    <script src="https://swetrix.org/swetrix.js" defer></script>
   </head>
 
   <body>
@@ -18,5 +19,11 @@
       <input type="text" name="contactText" />
       <button type="submit" name="button">Send</button>
     </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        swetrix.init('f85vwPrZi2-d');
+        swetrix.trackViews();
+      });
+    </script>
   </body>
 </html>
