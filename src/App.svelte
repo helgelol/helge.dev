@@ -1,5 +1,9 @@
 <script>
   import FrontPage from './components/FrontPage.svelte';
+  import * as Swetrix from 'swetrix';
+
+  Swetrix.init('f85vwPrZi2-d');
+  Swetrix.trackViews();
 </script>
 
 <svelte:head>
