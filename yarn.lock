@@ -106,11 +106,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.13.tgz#5ed7ed7c662948335fcad6c412bb42d99ea754e3"
   integrity sha512-Y86MAxASe25hNzlDbsviXl8jQHb0RDvKt4c40ZJQ1Don0AAL0STLZSs4N+6gLEO55pedy7r2cLwS+ZDxPm/2Bw==
 
-"@types/node@^14.18.0":
-  version "14.18.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.9.tgz#0e5944eefe2b287391279a19b407aa98bd14436d"
-  integrity sha512-j11XSuRuAlft6vLDEX4RvhqC0KxNxx6QIyMXNb0vHHSNPXTPeiy3algESWmOOIzEtiEL0qiowPU3ewW9hHVa7Q==
-
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -1251,13 +1246,6 @@ svelte@^3.0.0:
   version "3.46.3"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.46.3.tgz#31202b0c795f276726d95b648b6dd413116257ac"
   integrity sha512-mTOXvv74CVQqJHqoIZDprVfRKVVmYNadXP0VKnOEA54223kLGCr1nMrifS4Zx29qMt/xRB38Eq1D7dDH/fM8fQ==
-
-swetrix@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/swetrix/-/swetrix-1.3.1.tgz#079f910fb99e1a163ebe9a350ef0b34ebbe24eb4"
-  integrity sha512-bmZuEyxLXl2Hm8nHQm6iWh/B0BbJzYqr24MgsLClXCY2rT7Dl6CVbmurQFJHP3MJ41gyYT2crxEvSbf5Bq5YCA==
-  dependencies:
-    "@types/node" "^14.18.0"
 
 tailwindcss@^2.1.4:
   version "2.2.19"
