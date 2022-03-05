@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import ContactFormContent from './ContactFormContent.svelte';
 
   import { fade } from 'svelte/transition';
