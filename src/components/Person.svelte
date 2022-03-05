@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   const myName = 'Helge Johansen';
   const myTitle = 'System Developer';
 </script>

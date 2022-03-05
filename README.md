@@ -2,67 +2,43 @@
 
 [![Deploy](https://github.com/helgelol/kubes/actions/workflows/deploy.yml/badge.svg)](https://github.com/helgelol/kubes/actions/workflows/deploy.yml)
 
-This is a [Svelte](https://svelte.dev) app, with [Tailwind](https://tailwindcss.com/) for styling.  
-Svelte is a lightweight javascript compiler, and only includes used components when built, so it's fast and small.
+## Need an official Svelte framework?
 
-_Note that you will need to have [Node.js](https://nodejs.org) installed._
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-## Get started
+## Technical considerations
 
-Install the dependencies...
+**Why use this over SvelteKit?**
 
-```bash
-yarn
-```
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
 
-...then start [Rollup](https://rollupjs.org):
+This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-```bash
-yarn dev
-```
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-App should now be available on [localhost:5000](http://localhost:5000).
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
 
-By default, the server will only respond to requests from localhost.  
-To allow connections from other computers, edit the `sirv` commands  
-in package.json to include the option `--host 0.0.0.0`.
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
 
-## Building and running in production mode
+**Why include `.vscode/extensions.json`?**
 
-To create an optimised version of the app:
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-```bash
-yarn build
-```
+**Why enable `allowJs` in the TS template?**
 
-You can run the newly built app with `yarn start`.  
-This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies`  
-so that the app will work when you deploy to platforms like [netlify](https://netlify.com).
+While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
 
-## Single-page app mode
+**Why is HMR not preserving my local component state?**
 
-By default, sirv will only respond to requests that match files in `public`.  
-This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
 
-If you're building a single-page app (SPA) with multiple routes,  
-sirv needs to be able to respond to requests for _any_ path.  
-You can make it so by editing the `"start"` command in package.json:
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
 
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment,  
-you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
+```ts
+// store.ts
+// An extremely simple external store
+import { writable } from 'svelte/store';
+export default writable(0);
 ```

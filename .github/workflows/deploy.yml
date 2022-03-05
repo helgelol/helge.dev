@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
-      - name: Use Node.js 15.x
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: 15.x
+          node-version: 14.x
       - run: yarn
       - run: yarn build
       - name: Deploy to netlify
@@ -24,4 +24,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: deploy --dir=public --prod --message "${{ github.event.head_commit.message }}"
+          args: deploy --dir=dist --prod --message "${{ github.event.head_commit.message }}"

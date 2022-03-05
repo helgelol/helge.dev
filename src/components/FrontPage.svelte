@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Logo from './Logo.svelte';
   import Person from './Person.svelte';
   import Links from './Links.svelte';
