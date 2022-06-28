@@ -15,6 +15,16 @@
   />
   <script src="https://kit.fontawesome.com/929d0d8056.js" crossorigin="anonymous">
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEDMPRK3KN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MEDMPRK3KN');
+  </script>
 </svelte:head>
 <main>
   <FrontPage />
