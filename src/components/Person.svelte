@@ -1,5 +1,5 @@
 <script lang="ts">
-  const myName = 'Helge Johansen';
+  const myName = 'Helge Falch';
   const myTitle = 'System Developer';
 </script>
 
