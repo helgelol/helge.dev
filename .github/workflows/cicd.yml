@@ -1,6 +1,6 @@
 name: Build, test & deploy
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -28,7 +28,8 @@ jobs:
           path: dist
 
   deploy:
-    if: github.ref == 'refs/heads/main' # Only run if branch is
+    needs: build # needs previous job to be complete before starting this
+    if: github.ref == 'refs/heads/main' # Only run if branch is main
     runs-on: ubuntu-latest
     steps:
       - name: Download the build folders
