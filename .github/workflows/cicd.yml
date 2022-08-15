@@ -25,7 +25,7 @@ jobs:
         with:
           build: yarn build
           start: yarn dev
-          wait-on: http://localhost:3000/
+          wait-on: http://localhost:5173/
           browser: chrome
 
       - name: Save build folder
