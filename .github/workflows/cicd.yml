@@ -20,6 +20,14 @@ jobs:
       - name: Build Application
         run: yarn build
 
+      - name: Cypress Integration Tests
+        uses: cypress-io/github-action@v4
+        with:
+          build: yarn build
+          start: yarn dev
+          wait-on: http://localhost:3000/
+          browser: chrome
+
       - name: Save build folder
         uses: actions/upload-artifact@v2
         with:
