@@ -4,6 +4,6 @@ export default defineConfig({
   e2e: {
     supportFile: false,
     setupNodeEvents(on, config) {},
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://localhost:4173',
   },
 });
