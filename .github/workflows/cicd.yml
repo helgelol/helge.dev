@@ -17,8 +17,16 @@ jobs:
       - name: Install Node Modules
         run: yarn
 
-      - name: Build Application
-        run: yarn build
+      # - name: Build Application
+      #   run: yarn build
+
+      - name: Cypress Integration Tests
+        uses: cypress-io/github-action@v4
+        with:
+          build: yarn build
+          start: yarn preview
+          wait-on: http://localhost:4173/
+          browser: chrome
 
       - name: Save build folder
         uses: actions/upload-artifact@v2
