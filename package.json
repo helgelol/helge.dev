@@ -10,7 +10,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.4",
     "@tsconfig/svelte": "^3.0.0",
     "autoprefixer": "^10.4.8",
     "cypress": "^10.7.0",
