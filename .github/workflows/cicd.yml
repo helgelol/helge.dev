@@ -44,7 +44,7 @@ jobs:
           path: dist
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2.3
+        uses: nwtgck/actions-netlify@v1.2.4
         with:
           publish-dir: './dist'
           production-deploy: true
