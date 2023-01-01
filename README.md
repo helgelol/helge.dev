@@ -1,6 +1,6 @@
 # KUBES
 
-[![Deploy](https://github.com/helgelol/kubes/actions/workflows/deploy.yml/badge.svg)](https://github.com/helgelol/kubes/actions/workflows/deploy.yml)
+[![Building](https://github.com/helgelol/kubes/actions/workflows/cicd.yml/badge.svg)](https://github.com/helgelol/kubes/actions/workflows/cicd.yml/badge.svg)
 
 ## Need an official Svelte framework?
 
