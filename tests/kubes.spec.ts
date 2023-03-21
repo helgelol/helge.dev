@@ -1,7 +1,7 @@
 import { test, expect, chromium } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:4173/');
+  await page.goto('https://dev.kubes.no/');
 });
 
 test('Should have correct title', async ({ page }) => {

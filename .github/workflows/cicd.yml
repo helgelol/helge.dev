@@ -14,21 +14,6 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install dependencies
-        run: yarn
-
-      - name: Install Playwright Browsers
-        run: yarn playwright install --with-deps
-
-      - name: Build site
-        run: yarn build
-
-      - name: Preview site
-        run: yarn preview
-
-      - name: Run Playwright tests
-        run: yarn playwright test
-
       - name: Save build folder
         uses: actions/upload-artifact@v3
         with:
@@ -36,8 +21,37 @@ jobs:
           if-no-files-found: error
           path: dist
 
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the build folders
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0.0
+        with:
+          publish-dir: './dist'
+          production-deploy: true
+          deploy-message: ${{ github.event.head_commit.message }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.DEV_SITE_ID }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: yarn playwright test
+
   deploy:
-    needs: build # needs previous job to be complete before starting this
+    needs: test # needs previous job to be complete before starting this
     if: github.ref == 'refs/heads/main' # Only run if branch is main
     runs-on: ubuntu-latest
     steps:
