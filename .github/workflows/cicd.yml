@@ -14,16 +14,14 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: Install Node Modules
+      - name: Install dependencies
         run: yarn
 
-      - name: Build & Integration Tests
-        uses: cypress-io/github-action@v5
-        with:
-          build: yarn build
-          start: yarn preview
-          wait-on: http://localhost:4173/
-          browser: chrome
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: yarn playwright test
 
       - name: Save build folder
         uses: actions/upload-artifact@v3
