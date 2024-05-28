@@ -10,10 +10,10 @@
 	<main>
 		<h1>About</h1>
 		<p>
-			I'm a Software developer with over 2 years of front-end development experience, experienced in
-			both enterprise and open-source software development. I'm based in Italy and currently working
-			as a freelancer and coding in Node.js, React.js (and other web technologies) and Go(lang), but
-			I tend to learn and use the best technology and approach to best solve the problem I'm facing.
+			I'm is a seasoned full-stack developer with over 15 years of experience. <br />
+			My journey in the software field spans years of hands-on experience and a rich background in Containers,
+			Software Development, and Linux in both large enterprises and small companies, either as a consultant
+			or employee.
 		</p>
 		<h2>Skills</h2>
 		{#each Object.entries(skills) as [section, technologies]}
