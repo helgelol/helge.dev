@@ -121,8 +121,8 @@
 <slot />
 
 <footer>
-	by <a class="me" href="/about">helgelol</a>
-	<!-- <span class="svelte">Svelte</span> -->
+	made with <a href="https://svelte.dev/">svelte</a> ❤️
+	<!-- by <a class="me" href="/about">helgelol</a> -->
 </footer>
 
 <style>
@@ -209,7 +209,7 @@
 	}
 
 	a {
-		color: rgb(0, 100, 200);
+		color: white;
 		text-decoration: none;
 	}
 
@@ -218,7 +218,7 @@
 	}
 
 	a:visited {
-		color: rgb(0, 80, 160);
+		color: white;
 	}
 
 	.modalContainer div {
@@ -272,10 +272,6 @@
 	footer a {
 		text-decoration: none;
 		color: #4158d0;
-	}
-
-	footer .me {
-		color: #d17335;
 	}
 
 	@media (min-width: 900px) {
