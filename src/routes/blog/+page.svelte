@@ -38,7 +38,7 @@
 			</div>
 		{/each}
 		{#if filteredArticles.length === 0}
-			<div>No Articles</div>
+			<div>No Articles yet.</div>
 		{/if}
 	</div>
 </div>
