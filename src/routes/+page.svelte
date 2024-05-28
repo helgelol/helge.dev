@@ -10,7 +10,9 @@
 	<title>Helge Falch - Main</title>
 </svelte:head>
 <main>
-	<h1>Lorem!✋ <br /> ipsum dolor sit amet 💻 consectetur adipiscing elit</h1>
+	<!-- <h1>Lorem!✋ <br /> ipsum dolor sit amet 💻 consectetur adipiscing elit</h1> -->
+	<h1>Helge Falch</h1>
+	<h2>Software Developer</h2>
 	<div class="icons">
 		<div
 			role="button"
@@ -69,7 +71,12 @@
 	}
 
 	h1 {
-		font-weight: 700;
+		font-weight: 400;
+	}
+	h2 {
+		line-height: 0;
+		font-weight: 400;
+		font-size: 28px;
 	}
 
 	main > h1 {
