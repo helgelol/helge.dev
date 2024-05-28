@@ -10,8 +10,8 @@
 	<div class="projects">
 		<h1>Projects</h1>
 		<p class="note">
-			Note: most of my projects are under NDA so I am unable to share those projects. If there is
-			anything you would like to see further, please feel free to contact me.
+			Most projects delivered to customers, or developed and used inhouse are ineglible to be listed
+			here, as they are protected under their respective NDA's.
 		</p>
 		{#each projects as project}
 			<div class="project">
@@ -20,7 +20,7 @@
 						{project.title}
 					</h2>
 					<div class="techsContainer">
-						Technologies:
+						Tech:
 						<div class="techs">
 							{#each project.technologies as tech}
 								<div>{tech}</div>
@@ -32,7 +32,7 @@
 					{project.description}
 				</p>
 				<a href={project.url} target="_blank" rel="noreferrer">
-					<div class="button">Project url =></div>
+					<div class="button">Project url -></div>
 				</a>
 			</div>
 		{/each}
@@ -86,17 +86,20 @@
 		display: flex;
 		flex-direction: column;
 		color: white;
-		background: #111;
+		background-color: rgba(0, 0, 0, 0.2);
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 		padding: 2rem;
 		width: 100%;
 		border-radius: 5px;
 		transition: transform 0.2s ease-in-out;
-		border-radius: 25px;
+		border-radius: 20px;
 	}
 
 	.project p {
 		font-weight: 100;
-		color: #708090;
+		color: rgba(255, 255, 255, 0.7);
+		/* color: #708090; */
 	}
 
 	.projects {
@@ -127,9 +130,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: white;
-		border: 2px solid white;
+		/* color: white; */
+		color: rgba(255, 255, 255, 0.7);
+		border: 2px solid rgba(255, 255, 255, 0.7);
 		padding: 10px;
+		border-radius: 20px;
 	}
 
 	@media (min-width: 900px) {
