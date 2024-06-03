@@ -7,10 +7,9 @@
 </script>
 
 <svelte:head>
-	<title>helge - Main</title>
+	<title>helge - main</title>
 </svelte:head>
 <main>
-	<!-- <h1>Lorem!✋ <br /> ipsum dolor sit amet 💻 consectetur adipiscing elit</h1> -->
 	<h1>Helge Falch</h1>
 	<h2>Software Developer</h2>
 	<div class="icons">

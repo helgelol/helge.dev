@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>helge — About</title>
+	<title>helge - about</title>
 </svelte:head>
 
 <div class="container">

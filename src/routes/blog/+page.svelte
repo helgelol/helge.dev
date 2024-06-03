@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>helge — Blog</title>
+	<title>helge - blog</title>
 </svelte:head>
 
 <div class="articlesContainer">

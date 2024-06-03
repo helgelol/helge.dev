@@ -122,7 +122,6 @@
 
 <footer>
 	made with <a href="https://svelte.dev/">svelte</a> ❤️
-	<!-- by <a class="me" href="/about">helgelol</a> -->
 </footer>
 
 <style>
