@@ -201,10 +201,12 @@
 
 	:global(a) {
 		text-decoration: none;
+		color: white;
 	}
 
 	:global(a) {
 		text-decoration: none;
+		color: white;
 	}
 
 	a {
@@ -270,7 +272,7 @@
 
 	footer a {
 		text-decoration: none;
-		color: #4158d0;
+		color: white;
 	}
 
 	@media (min-width: 900px) {
