@@ -25,7 +25,9 @@ jobs:
         with:
           name: build
           if-no-files-found: error
-          path: build
+          path: |
+            build
+            .svelte-kit
 
   test:
     needs: build
@@ -43,7 +45,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build
-          path: build
+          path: |
+            build
+            .svelte-kit
 
       - name: Install dependencies
         run: yarn
