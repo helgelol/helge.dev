@@ -3,16 +3,16 @@
 </script>
 
 <svelte:head>
-	<title>Helge — About</title>
+	<title>helge — About</title>
 </svelte:head>
 
 <div class="container">
 	<main>
 		<h1>About</h1>
 		<p>
-			I'm is a seasoned full-stack developer with over 15 years of experience. <br />
-			My journey in the software field spans years of hands-on experience and a rich background in Containers,
-			Software Development, and Linux in both large enterprises and small companies, either as a consultant
+			I'm is a seasoned software developer with over 15 years of experience. <br />
+			My journey in the software field spans years of hands-on experience and a rich background in Software
+			Development, Containers and Linux in both large enterprises and small companies, either as a consultant
 			or employee.
 		</p>
 		<h2>Skills</h2>

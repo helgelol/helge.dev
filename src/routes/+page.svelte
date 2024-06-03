@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Helge Falch - Main</title>
+	<title>helge - Main</title>
 </svelte:head>
 <main>
 	<!-- <h1>Lorem!✋ <br /> ipsum dolor sit amet 💻 consectetur adipiscing elit</h1> -->

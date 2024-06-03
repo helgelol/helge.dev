@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Helge — Projects</title>
+	<title>helge — Projects</title>
 </svelte:head>
 
 <div class="projectContainer">
