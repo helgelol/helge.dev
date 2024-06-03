@@ -58,11 +58,19 @@ jobs:
     if: github.ref == 'refs/heads/main' # Only run if branch is main
     runs-on: ubuntu-latest
     steps:
-      - name: Download the build folders
-        uses: actions/download-artifact@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 21.x
+        uses: actions/setup-node@v4
         with:
-          name: build
-          path: build
+          node-version: 21.x
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v3.0.0
