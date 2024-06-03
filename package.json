@@ -1,29 +1,38 @@
 {
-  "name": "kubes-web-app",
-  "private": true,
-  "version": "1.1.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "e2e": "playwright test",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.44.1",
-    "@sveltejs/vite-plugin-svelte": "^1.4.0",
-    "@tsconfig/svelte": "^5.0.4",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "postcss-load-config": "^6.0.1",
-    "svelte": "^3.59.2",
-    "svelte-check": "^3.8.0",
-    "svelte-preprocess": "^5.1.4",
-    "tailwindcss": "^3.4.3",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.5",
-    "vite": "^3.2.5"
-  },
-  "dependencies": {}
+	"name": "helge.dev",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"e2e": "playwright test",
+		"clean": "rm -rf node_modules .svelte-kit build dist",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.44.1",
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/adapter-static": "2.0.3",
+		"@sveltejs/kit": "^1.22.1",
+		"@types/cookie": "^0.6.0",
+		"@typescript-eslint/eslint-plugin": "^5.61.0",
+		"@typescript-eslint/parser": "^5.61.0",
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-svelte": "^2.39.0",
+		"prettier": "^2.0.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"sass": "^1.77.3",
+		"svelte": "^4.2.17",
+		"svelte-check": "^3.8.0",
+		"svelte-icons": "^2.1.0",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.5",
+		"vite": "^4.4.2"
+	},
+	"type": "module"
 }

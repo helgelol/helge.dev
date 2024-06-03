@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/logo.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png" />
+		<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
+		<link
+			rel="apple-touch-icon"
+			type="image/png"
+			sizes="180x180"
+			href="%sveltekit.assets%/apple-touch-icon.png"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Helge Falch</title>
+		<meta name="title" content="Helge Falch" />
+		<meta name="description" content="Software Developer" />
+
+		%sveltekit.head%
+	</head>
+	<body>
+		<div id="svelte">%sveltekit.body%</div>
+		<form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
+			<input type="email" name="contactEmail" />
+			<input type="text" name="contactText" />
+			<button type="submit" name="button">Send</button>
+		</form>
+	</body>
+</html>
