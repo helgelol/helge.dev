@@ -3,7 +3,8 @@
 	import Logo from '$lib/assets/logo.svg';
 	import routes from '$lib/NavRoutes';
 	let opened = false;
-	export let segment: string;
+
+	export let segment;
 </script>
 
 <div class={opened ? 'NavBar open' : 'NavBar'}>
