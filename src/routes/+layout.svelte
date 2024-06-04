@@ -15,29 +15,6 @@
 	const cookieEnabled = false;
 	$: showCookieModal = false;
 
-	interface CssVariables {
-		[name: string]: string;
-	}
-
-	const cssVariables = (
-		node: HTMLElement,
-		variables: CssVariables
-	): { update: (variables: CssVariables) => void } => {
-		setCssVariables(node, variables);
-
-		return {
-			update(variables: CssVariables) {
-				setCssVariables(node, variables);
-			}
-		};
-	};
-
-	const setCssVariables = (node: HTMLElement, variables: CssVariables): void => {
-		for (const name in variables) {
-			node.style.setProperty(`--${name}`, variables[name]);
-		}
-	};
-
 	const copy = () => {
 		navigator.clipboard.writeText(Email);
 	};
@@ -47,17 +24,7 @@
 		if (showCookie !== null) showCookieModal = JSON.parse(showCookie);
 		else showCookieModal = true;
 	});
-
-	// beforeNavigate(({ to }) => {
-	// 	const pathName = to.pathname;
-	// 	const route = routes.find((route) => pathName === route.href);
-	// 	if (!route.customColor) {
-	// 		customBackground.set('#0a0908');
-	// 	} else customBackground.set(route.customColor);
-	// });
 </script>
-
-<!-- <svelte:body use:cssVariables={{ background: $customBackground }} /> -->
 
 {#if showCookieModal && cookieEnabled}
 	<div class="cookieContainer">
