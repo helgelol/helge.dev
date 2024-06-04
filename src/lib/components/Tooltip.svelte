@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let tooltip: string;
+	export let tooltip;
 </script>
 
 <div data-tooltip={tooltip} class="container">
