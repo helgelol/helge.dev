@@ -1,9 +1,8 @@
 <script lang="ts">
 	import FaExternalLinkAlt from 'svelte-icons/fa/FaExternalLinkAlt.svelte';
-	import type { Article, PageData } from './types.js';
 
-	export let data: PageData;
-	let article: Article = data.article;
+	export let data;
+	let article = data.article;
 </script>
 
 <svelte:head>
