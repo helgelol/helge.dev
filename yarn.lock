@@ -328,10 +328,10 @@
   dependencies:
     import-meta-resolve "^4.1.0"
 
-"@sveltejs/adapter-static@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.1.tgz#64c36020435d7b1eacd362b2d027fefda5ec2e44"
-  integrity sha512-6lMvf7xYEJ+oGeR5L8DFJJrowkefTK6ZgA4JiMqoClMkKq0s6yvsd3FZfCFvX1fQ0tpCD7fkuRVHsnUVgsHyNg==
+"@sveltejs/adapter-static@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.2.tgz#b505c429616c3319d40d293b741f6915da143f49"
+  integrity sha512-/EBFydZDwfwFfFEuF1vzUseBoRziwKP7AoHAwv+Ot3M084sE/HTVBHf9mCmXfdM9ijprY5YEugZjleflncX5fQ==
 
 "@sveltejs/kit@^2.5.11":
   version "2.5.11"
