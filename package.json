@@ -33,7 +33,7 @@
 		"svelte-icons": "^2.1.0",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.4",
-		"vite": "^5.3.4"
+		"vite": "^5.3.5"
 	},
 	"type": "module"
 }
