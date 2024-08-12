@@ -321,10 +321,10 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.18.0.tgz#5d694d345ce36b6ecf657349e03eb87297e68da4"
   integrity sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==
 
-"@sveltejs/adapter-auto@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-auto/-/adapter-auto-3.2.3.tgz#191f08a4354fafd5e086e877fa21b88d321d13a8"
-  integrity sha512-VbWzQdNuunHsqa/OqPLqdL3fpyz9tH1f5CawjeYpPcowMI7Ng727M1/Z20yK1L7vrF7L2sYDFeE8vELgUy1Ibg==
+"@sveltejs/adapter-auto@^3.2.4":
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-auto/-/adapter-auto-3.2.4.tgz#fe0dc1aa986cfa8a37deca4050ccec3f53db1c2a"
+  integrity sha512-a64AKYbfTUrVwU0xslzv1Jf3M8bj0IwhptaXmhgIkjXspBXhD0od9JiItQHchijpLMGdEDcYBlvqySkEawv6mQ==
   dependencies:
     import-meta-resolve "^4.1.0"
 
