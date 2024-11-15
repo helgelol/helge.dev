@@ -1598,10 +1598,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.0.7.tgz#f0f809abd2731a675fa9a8c60de2ba0235fbe44a"
-  integrity sha512-24hwo+D5L35HOXsh3Z2sU4WhdDLavlHquYaJhrEqAt+mV1xOVzoMVYThW80n99osDJxyuH+vxjNFkNRL4EvwTg==
+svelte-check@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.0.8.tgz#50706b6b82136a31c7c995950404f897468900a1"
+  integrity sha512-nYxbPa0GJySVLhrplvpdGGdwst/7r/H9N991PVYk3BtSIuWBw5ihItHCDJu7hE1S0bPSRJ6IJ2yTCQeDUk0ZDg==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
