@@ -8,5 +8,10 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-    reviewers:
-      - 'helgelol'
+    groups:
+      updates:
+        patterns:
+          - "*"
+        update-types:
+          - patch
+          - minor
