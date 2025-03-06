@@ -312,12 +312,12 @@
     "@parcel/watcher-win32-ia32" "2.4.1"
     "@parcel/watcher-win32-x64" "2.4.1"
 
-"@playwright/test@^1.50.1":
-  version "1.50.1"
-  resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.50.1.tgz#027d00ca77ec79688764eb765cfe9a688807bf0b"
-  integrity sha512-Jii3aBg+CEDpgnuDxEp/h7BimHcUTDlpEtce89xEumlJ5ef2hqepZ+PWp1DDpYC/VO9fmWVI1IlEaoI5fK9FXQ==
+"@playwright/test@^1.51.0":
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.51.0.tgz#8d5c8400b465a0bfdbcf993e390ceecb903ea6d2"
+  integrity sha512-dJ0dMbZeHhI+wb77+ljx/FeC8VBP6j/rj9OAojO08JI80wTZy6vRk9KvHKiDCUh4iMpEiseMgqRBIeW+eKX6RA==
   dependencies:
-    playwright "1.50.1"
+    playwright "1.51.0"
 
 "@polka/url@^1.0.0-next.24":
   version "1.0.0-next.25"
@@ -816,10 +816,10 @@ eslint-config-prettier@^10.0.2:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.0.2.tgz#47444de8aa104ce82c2f91ad2a5e96b62c01e20d"
   integrity sha512-1105/17ZIMjmCOJOPNfVdbXafLCLj3hPmkmB7dLgt7XsQ/zkxSuDerE/xgO3RxoHysR1N1whmquY0lSn2O0VLg==
 
-eslint-plugin-svelte@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-svelte/-/eslint-plugin-svelte-3.0.2.tgz#2f9fe30eaff6adc874a73b8472353aaf14a348ea"
-  integrity sha512-+0QglmWNryvXXxRQKzLF3i+AreTsueCw7PBb0nGVBq+F9HoYqAjQeJ/9N6vFAtjMjK3wgsETrLVyBKPdeufN6Q==
+eslint-plugin-svelte@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-svelte/-/eslint-plugin-svelte-3.0.3.tgz#82c888dcc686282376f532fe1cc1e969146741d4"
+  integrity sha512-R7HSKkLN33P6WwYhVbO+5xPT0YIpO+YAZfWxow7I1IvjVgZOxuI7zReqxFL3B7F028u16Megx+hn8SEXDNcDvw==
   dependencies:
     "@eslint-community/eslint-utils" "^4.4.1"
     "@jridgewell/sourcemap-codec" "^1.5.0"
@@ -830,7 +830,7 @@ eslint-plugin-svelte@^3.0.2:
     postcss-load-config "^3.1.4"
     postcss-safe-parser "^7.0.0"
     semver "^7.6.3"
-    svelte-eslint-parser "^1.0.0"
+    svelte-eslint-parser "^1.0.1"
 
 eslint-scope@^7.2.2:
   version "7.2.2"
@@ -1397,12 +1397,7 @@ periscopic@^3.1.0:
     estree-walker "^3.0.0"
     is-reference "^3.0.0"
 
-picocolors@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.1.tgz#a8ad579b571952f0e5d25892de5445bcfe25aaa1"
-  integrity sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==
-
-picocolors@^1.1.1:
+picocolors@^1.0.0, picocolors@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
@@ -1412,17 +1407,17 @@ picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-playwright-core@1.50.1:
-  version "1.50.1"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.50.1.tgz#6a0484f1f1c939168f40f0ab3828c4a1592c4504"
-  integrity sha512-ra9fsNWayuYumt+NiM069M6OkcRb1FZSK8bgi66AtpFoWkg2+y0bJSNmkFrWhMbEBbVKC/EruAHH3g0zmtwGmQ==
+playwright-core@1.51.0:
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.51.0.tgz#bb23ea6bb6298242d088ae5e966ffcf8dc9827e8"
+  integrity sha512-x47yPE3Zwhlil7wlNU/iktF7t2r/URR3VLbH6EknJd/04Qc/PSJ0EY3CMXipmglLG+zyRxW6HNo2EGbKLHPWMg==
 
-playwright@1.50.1:
-  version "1.50.1"
-  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.50.1.tgz#2f93216511d65404f676395bfb97b41aa052b180"
-  integrity sha512-G8rwsOQJ63XG6BbKj2w5rHeavFjy5zynBA9zsJMMtBoe/Uf757oG12NXz6e6OirF7RCrTVAKFXbLmn1RbL7Qaw==
+playwright@1.51.0:
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.51.0.tgz#9ba154497ba62bc6dc199c58ee19295eb35a4707"
+  integrity sha512-442pTfGM0xxfCYxuBa/Pu6B2OqxqqaYq39JS8QDMGThUvIOCd6s0ANDog3uwA0cHavVlnTQzGCN7Id2YekDSXA==
   dependencies:
-    playwright-core "1.50.1"
+    playwright-core "1.51.0"
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1623,10 +1618,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.1.4.tgz#59ec6f08d23647ec508ff01584ef6d191c77c9e1"
-  integrity sha512-v0j7yLbT29MezzaQJPEDwksybTE2Ups9rUxEXy92T06TiA0cbqcO8wAOwNUVkFW6B0hsYHA+oAX3BS8b/2oHtw==
+svelte-check@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.1.5.tgz#afdb3f8050c123064124d5aa7821365c7befa7a4"
+  integrity sha512-Gb0T2IqBNe1tLB9EB1Qh+LOe+JB8wt2/rNBDGvkxQVvk8vNeAoG+vZgFB/3P5+zC7RWlyBlzm9dVjZFph/maIg==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
@@ -1634,10 +1629,10 @@ svelte-check@^4.1.4:
     picocolors "^1.0.0"
     sade "^1.7.4"
 
-svelte-eslint-parser@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/svelte-eslint-parser/-/svelte-eslint-parser-1.0.0.tgz#186187e056be9870c8c76b40242c61e9efde94f9"
-  integrity sha512-diZzpeeFhAxormeIhmRS4vXx98GG6T7Dq5y1a6qffqs/5MBrBqqDg8bj88iEohp6bvhU4MIABJmOTa0gXWcbSQ==
+svelte-eslint-parser@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/svelte-eslint-parser/-/svelte-eslint-parser-1.0.1.tgz#af9912288ebc691b986861db8fcf44fe71fedfeb"
+  integrity sha512-JjdEMXOJqy+dxeaElxbN+meTOtVpHfLnq9VGpiTAOLgM0uHO+ogmUsA3IFgx0x3Wl15pqTZWycCikcD7cAQN/g==
   dependencies:
     eslint-scope "^8.2.0"
     eslint-visitor-keys "^4.0.0"
