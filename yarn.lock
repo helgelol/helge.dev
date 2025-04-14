@@ -409,10 +409,10 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.8.tgz#f23ee99a9678dbaec58b79d183bc3defbfe99f1a"
   integrity sha512-YaDrquRpZwfcXbnlDsSrBQNCChVOT9MGuSg+dMAyfsAa1SmiAhrA5jUYUiIMC59G92kIbY/AaQOWcBdq+lh+zg==
 
-"@sveltejs/kit@^2.20.5":
-  version "2.20.5"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.20.5.tgz#72546cf594fe8cebc2ef0bbf2923dffb411a5e20"
-  integrity sha512-zT/97KvVUo19jEGZa972ls7KICjPCB53j54TVxnEFT5VEwL16G+YFqRVwJbfxh7AmS7/Ptr1rKF7Qt4FBMDNlw==
+"@sveltejs/kit@^2.20.6":
+  version "2.20.6"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.20.6.tgz#168e03e6c8373f6b18ea1b88e62a6a452a19881a"
+  integrity sha512-ImUkSQ//Xf4N9r0HHAe5vRA7RyQ7U1Ue1YUT235Ig+IiIqbsixEulHTHrP5LtBiC8xOkJoPZQ1VZ/nWHNOaGGw==
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^0.6.0"
@@ -1605,10 +1605,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.1.5.tgz#afdb3f8050c123064124d5aa7821365c7befa7a4"
-  integrity sha512-Gb0T2IqBNe1tLB9EB1Qh+LOe+JB8wt2/rNBDGvkxQVvk8vNeAoG+vZgFB/3P5+zC7RWlyBlzm9dVjZFph/maIg==
+svelte-check@^4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.1.6.tgz#ccb612556678d7770a62c2ad6d4bd49a647afb92"
+  integrity sha512-P7w/6tdSfk3zEVvfsgrp3h3DFC75jCdZjTQvgGJtjPORs1n7/v2VMPIoty3PWv7jnfEm3x0G/p9wH4pecTb0Wg==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
