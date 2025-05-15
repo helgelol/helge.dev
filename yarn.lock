@@ -1449,10 +1449,10 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-svelte@^3.3.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-svelte/-/prettier-plugin-svelte-3.3.3.tgz#49d5c025a1516063ac7ef026806f880caa310424"
-  integrity sha512-yViK9zqQ+H2qZD1w/bH7W8i+bVfKrD8GIFjkFe4Thl6kCT9SlAsXVNmt3jCvQOCsnOhcvYgsoVlRV/Eu6x5nNw==
+prettier-plugin-svelte@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-svelte/-/prettier-plugin-svelte-3.4.0.tgz#ed0a860b22d39682c1db5c2a210b3db073b4f689"
+  integrity sha512-pn1ra/0mPObzqoIQn/vUTR3ZZI6UuZ0sHqMK5x2jMLGrs53h0sXhkVuDcrlssHwIMk7FYrMjHBPoUSyyEEDlBQ==
 
 prettier@^3.5.3:
   version "3.5.3"
@@ -1601,10 +1601,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.1.7.tgz#3c61e965160dacb5dc6a643c85f715c00d19ce7e"
-  integrity sha512-1jX4BzXrQJhC/Jt3SqYf6Ntu//vmfc6VWp07JkRfK2nn+22yIblspVUo96gzMkg0Zov8lQicxhxsMzOctwcMQQ==
+svelte-check@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.2.0.tgz#868bc3a5a9c1f0c07da6f14d08c16d8d8a2e0911"
+  integrity sha512-79ozTLjGBQ2R5PvZ7enSYBsMyY1fy3pwQ/N1BtuTVXtQRH9Vc10eV66LePV52t1ZlflZBTkIGz79cStPnCUEEQ==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
