@@ -419,10 +419,10 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.9.tgz#f31e4c8e54a08598e88eca9d7ebd864e9f4080dc"
   integrity sha512-aytHXcMi7lb9ljsWUzXYQ0p5X1z9oWud2olu/EpmH7aCu4m84h7QLvb5Wp+CFirKcwoNnYvYWhyP/L8Vh1ztdw==
 
-"@sveltejs/kit@^2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.43.2.tgz#a634068bc0af466743a798088014c8e44f2b2f94"
-  integrity sha512-M27eBoqWmU7dEpotMGBaA1CK6Y/wK1b176mVOkrSJZwt17bk6Z1IjLQv0iuVYm7D8d1Z/I4HzJ3hSqy8auj1Sw==
+"@sveltejs/kit@^2.43.4":
+  version "2.43.4"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.43.4.tgz#6ed3b58c23220d6fe6ac0a3d75d5b89a989c00f8"
+  integrity sha512-GfvOq3A/qMRhj2L9eKjxaI8FLqZDh5SY74YzhRKT//u2AvQw96ksEfjuHviC4jg9U08mBVB0Y47EwEJHO4BB4Q==
   dependencies:
     "@standard-schema/spec" "^1.0.0"
     "@sveltejs/acorn-typescript" "^1.0.5"
@@ -1542,10 +1542,10 @@ sade@^1.7.4, sade@^1.8.1:
   dependencies:
     mri "^1.1.0"
 
-sass@^1.93.1:
-  version "1.93.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.93.1.tgz#94bf77eeef5fba022c7316515327e275e46b654e"
-  integrity sha512-wLAeLB7IksO2u+cCfhHqcy7/2ZUMPp/X2oV6+LjmweTqgjhOKrkaE/Q1wljxtco5EcOcupZ4c981X0gpk5Tiag==
+sass@^1.93.2:
+  version "1.93.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.93.2.tgz#e97d225d60f59a3b3dbb6d2ae3c1b955fd1f2cd1"
+  integrity sha512-t+YPtOQHpGW1QWsh1CHQ5cPIr9lbbGZLZnbihP/D/qZj/yuV68m8qarcV17nvkOX81BCrvzAlq2klCQFZghyTg==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
