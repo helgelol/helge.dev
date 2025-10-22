@@ -19,7 +19,7 @@
 		"@sveltejs/kit": "^2.47.2",
 		"@sveltejs/vite-plugin-svelte": "^4.0.4",
 		"@types/cookie": "^1.0.0",
-		"@typescript-eslint/eslint-plugin": "7.18.0",
+		"@typescript-eslint/eslint-plugin": "^8.46.2",
 		"@typescript-eslint/parser": "7.18.0",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^10.1.8",
