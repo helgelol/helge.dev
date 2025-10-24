@@ -20,15 +20,6 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Save build folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          if-no-files-found: error
-          path: |
-            build
-            .svelte-kit
-
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -46,6 +37,15 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
 
       - name: Install Playwright Browsers
         run: yarn playwright install --with-deps
