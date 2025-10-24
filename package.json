@@ -21,7 +21,7 @@
 		"@types/cookie": "^1.0.0",
 		"@typescript-eslint/eslint-plugin": "^8.46.2",
 		"@typescript-eslint/parser": "^8.46.2",
-		"eslint": "^8.57.1",
+		"eslint": "^9.38.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.12.5",
 		"prettier": "^3.6.2",
