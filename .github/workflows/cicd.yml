@@ -9,25 +9,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Use Node.js 22.14.0
+      - name: Use Node.js 24.10.0
         uses: actions/setup-node@v6
         with:
-          node-version: 22.14.0
+          node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
 
       - name: Build
         run: yarn build
-
-      - name: Save build folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          if-no-files-found: error
-          path: |
-            build
-            .svelte-kit
 
   test:
     needs: build
@@ -36,10 +28,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Use Node.js 22.14.0
+      - name: Use Node.js 24.10.0
         uses: actions/setup-node@v6
         with:
-          node-version: 22.14.0
+          node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
@@ -47,7 +40,17 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/ms-playwright
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
       - name: Install Playwright Browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: yarn playwright install --with-deps
 
       - name: Run Playwright tests
@@ -61,10 +64,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Use Node.js 22.14.0
+      - name: Use Node.js 24.10.0
         uses: actions/setup-node@v6
         with:
-          node-version: 22.14.0
+          node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn

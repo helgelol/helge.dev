@@ -18,7 +18,7 @@
 
 {#if isOpen}
 	<div class={`modal ${closing && 'closing'}`}>
-		<div class="backdrop" on:click={close} role="button" tabindex="0" on:keypress={close} />
+		<div class="backdrop" on:click={close} role="button" tabindex="0" on:keypress={close}></div>
 		<div class="content-wrapper">
 			<div class="content">
 				<slot name="content" />
@@ -82,7 +82,9 @@
 		background: linear-gradient(155deg, rgba(255, 255, 255, 0.15), transparent);
 		-webkit-backdrop-filter: blur(20px);
 		backdrop-filter: blur(20px);
-		box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+		box-shadow:
+			2px 4px 6px rgba(0, 0, 0, 0.1),
+			inset 0 0 0 2px rgba(255, 255, 255, 0.1);
 		animation: openModalAnimation 0.3s ease-in-out;
 	}
 
