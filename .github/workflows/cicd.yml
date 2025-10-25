@@ -13,6 +13,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
@@ -31,6 +32,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
@@ -67,6 +69,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.10.0
+          cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
