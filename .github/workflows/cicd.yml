@@ -49,9 +49,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-playwright-
 
+      - name: Install Playwright browser dependencies
+        run: yarn playwright install-deps
+
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: yarn playwright install --with-deps
+        run: yarn playwright install
 
       - name: Run Playwright tests
         run: yarn e2e
