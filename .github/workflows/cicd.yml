@@ -42,9 +42,10 @@ jobs:
         uses: actions/cache@v4
         id: playwright-cache
         with:
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/playwright.config.ts') }}
           path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
+            ${{ runner.os }}-playwright-${{ hashFiles('**/playwright.config.ts') }}
             ${{ runner.os }}-playwright-
 
       - name: Install Playwright Browsers
