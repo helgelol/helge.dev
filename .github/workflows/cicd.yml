@@ -3,26 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Use Node.js 24.10.0
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24.10.0
-          cache: 'yarn'
-
-      - name: Install dependencies
-        run: yarn
-
-      - name: Build
-        run: yarn build
-
-  test:
-    needs: build
+  build-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -51,13 +32,13 @@ jobs:
 
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: yarn playwright install --with-deps
+        run: yarn playwright install
 
       - name: Run Playwright tests
         run: yarn e2e
 
   deploy:
-    needs: test # needs previous job to be complete before starting this
+    needs: build-test # needs previous job to be complete before starting this
     if: github.ref == 'refs/heads/main' # Only run if branch is main
     runs-on: ubuntu-latest
     steps:
