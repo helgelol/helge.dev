@@ -21,6 +21,9 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
+	{
+		ignores: ['build/**', '.svelte-kit/**']
+	},
 	...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended'),
 	sveltePlugin.configs.recommended,
 
