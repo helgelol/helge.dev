@@ -504,10 +504,10 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.10.tgz#526ab78cd1d3a861dd0233e8ff34a204af40d595"
   integrity sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==
 
-"@sveltejs/kit@^2.48.2":
-  version "2.48.2"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.48.2.tgz#22d476c2d8aae8993c38a82bcc59cc4ce13c9748"
-  integrity sha512-WIgVMGt+b9OxPDtu0Txow28RsBrLoV3wr2QoUxEHd4CHbpxbqKQf2SIEzd+SE+bqrUL2D5MxBeQBdY+t7o6n1A==
+"@sveltejs/kit@^2.48.3":
+  version "2.48.3"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.48.3.tgz#8f1b8a80e57293a4f4a97baf620803be5b4c4bc8"
+  integrity sha512-jf8mx3yctRXE9hvixgcqqK94YI2hDnbxI/12Upkz99XFMvxnJKCMzvz0j7lmbXSyBSNEycWO5xHvi7b73y9qkQ==
   dependencies:
     "@standard-schema/spec" "^1.0.0"
     "@sveltejs/acorn-typescript" "^1.0.5"
@@ -1570,10 +1570,10 @@ svelte-icons@^2.1.0:
   resolved "https://registry.yarnpkg.com/svelte-icons/-/svelte-icons-2.1.0.tgz#6f2ec72f1d5c8b2de1a4b8a822c95bcb2f701aca"
   integrity sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==
 
-svelte@^5.42.3:
-  version "5.42.3"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.42.3.tgz#32d5923868b34d0f44649ffb2d278199ccf9c2fb"
-  integrity sha512-+8dUmdJGvKSWEfbAgIaUmpD97s1bBAGxEf6s7wQonk+HNdMmrBZtpStzRypRqrYBFUmmhaUgBHUjraE8gLqWAw==
+svelte@^5.43.0:
+  version "5.43.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.43.0.tgz#506e43d41516160d58218ff049e17b1d0283811a"
+  integrity sha512-1sRxVbgJAB+UGzwkc3GUoiBSzEOf0jqzccMaVoI2+pI+kASUe9qubslxace8+Mzhqw19k4syTA5niCIJwfXpOA==
   dependencies:
     "@jridgewell/remapping" "^2.3.4"
     "@jridgewell/sourcemap-codec" "^1.5.0"
