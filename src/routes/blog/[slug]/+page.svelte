@@ -16,6 +16,7 @@
 				<a href={article.url} target="_blank" rel="noreferrer">{article.title} </a>
 				<a class="icon" href={article.url} target="_blank"><FaExternalLinkAlt /></a>
 			</h1>
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 			{@html article.body_html}
 		{/if}
 	</div>
