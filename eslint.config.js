@@ -63,7 +63,8 @@ export default defineConfig([
 			}
 		},
 		rules: {
-			'svelte/no-compiler-warnings': 'off'
+			'svelte/no-compiler-warnings': 'off',
+			'svelte/no-navigation-without-resolve': 'off'
 		}
 	}
 ]);

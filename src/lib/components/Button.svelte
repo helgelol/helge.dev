@@ -1,16 +1,21 @@
 <script>
-	import { goto } from '$app/navigation';
+	/*global window */
+	import { browser } from '$app/environment';
 	import { Email } from '$lib/Constants';
+
+	function handleClick() {
+		if (browser) {
+			window.location.href = `mailto:${Email}`;
+		}
+	}
 </script>
 
 <div
 	class="button"
 	role="button"
 	tabindex="0"
-	on:keypress={() => {
-		goto(`mailto:${Email}`);
-	}}
-	on:click={() => goto(`mailto:${Email}`)}
+	on:click={handleClick}
+	on:keypress={(e) => e.key === 'Enter' && handleClick()}
 >
 	<slot />
 </div>

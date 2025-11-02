@@ -13,7 +13,7 @@
 			Most projects delivered to customers, or developed and used inhouse are ineglible to be listed
 			here, as they are protected under their respective NDA's.
 		</p>
-		{#each projects as project}
+		{#each projects as project (project.title)}
 			<div class="project">
 				<div class="header">
 					<h2>
@@ -22,7 +22,7 @@
 					<div class="techsContainer">
 						Tech:
 						<div class="techs">
-							{#each project.technologies as tech}
+							{#each project.technologies as tech (tech)}
 								<div>{tech}</div>
 							{/each}
 						</div>
@@ -31,7 +31,12 @@
 				<p>
 					{project.description}
 				</p>
-				<a href={project.url} target="_blank" rel="noreferrer">
+				<a
+					href={project.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					data-sveltekit-preload-data="off"
+				>
 					<div class="button">Project url -></div>
 				</a>
 			</div>
