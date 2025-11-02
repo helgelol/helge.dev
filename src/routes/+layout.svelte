@@ -3,24 +3,21 @@
 	import Button from '$lib/components/Button.svelte';
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
-	// import { beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/Modal.svelte';
 	import { onMount } from 'svelte';
-	import { customBackground } from '$lib/store';
 	import { Email } from '$lib/Constants';
-	// import routes from '$lib/NavRoutes';
 
 	let copied = false;
 	const cookieEnabled = false;
-	$: showCookieModal = false;
+	let showCookieModal = false;
 
 	const copy = () => {
-		navigator.clipboard.writeText(Email);
+		window.navigator.clipboard.writeText(Email);
 	};
 
 	onMount(() => {
-		const showCookie = localStorage.getItem('showCookieModal');
+		const showCookie = window.localStorage.getItem('showCookieModal');
 		if (showCookie !== null) showCookieModal = JSON.parse(showCookie);
 		else showCookieModal = true;
 	});
@@ -34,11 +31,11 @@
 			tabindex="0"
 			on:keypress={() => {
 				showCookieModal = false;
-				localStorage.setItem('showCookieModal', 'false');
+				window.localStorage.setItem('showCookieModal', 'false');
 			}}
 			on:click={() => {
 				showCookieModal = false;
-				localStorage.setItem('showCookieModal', 'false');
+				window.localStorage.setItem('showCookieModal', 'false');
 			}}
 		>
 			&#10005;
@@ -61,14 +58,14 @@
 						on:keypress={() => {
 							copied = true;
 							copy();
-							setTimeout(() => {
+							window.setTimeout(() => {
 								copied = false;
 							}, 500);
 						}}
 						on:click={() => {
 							copied = true;
 							copy();
-							setTimeout(() => {
+							window.setTimeout(() => {
 								copied = false;
 							}, 500);
 						}}

@@ -1,5 +1,4 @@
 <script>
-	/*global setTimeout */
 	import { modalOpened } from '$lib/store';
 	let isOpen = false;
 	let closing = false;

@@ -1,5 +1,4 @@
 <script>
-	/*global window */
 	import { browser } from '$app/environment';
 	import { Email } from '$lib/Constants';
 
