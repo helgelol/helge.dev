@@ -60,6 +60,9 @@ export default defineConfig([
 
 			parserOptions: {
 				parser: '@typescript-eslint/parser'
+			},
+			globals: {
+				...globals.browser
 			}
 		},
 		rules: {
