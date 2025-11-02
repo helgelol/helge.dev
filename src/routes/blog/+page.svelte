@@ -17,7 +17,7 @@
 	<div class="articles">
 		<h1>Articles</h1>
 
-		{#each filteredArticles as article}
+		{#each filteredArticles as article (article.id)}
 			<div class="article">
 				<div class="header">
 					<h2>

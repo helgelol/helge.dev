@@ -16,14 +16,14 @@
 			or employee.
 		</p>
 		<h2>Skills</h2>
-		{#each Object.entries(skills) as [section, technologies]}
+		{#each Object.entries(skills) as [section, technologies] (section)}
 			<ul>
 				<li>
 					<h4>
 						{section}:
 					</h4>
 					<div class="list">
-						{#each technologies as technology}
+						{#each technologies as technology (technology)}
 							<div>
 								{technology}
 							</div>

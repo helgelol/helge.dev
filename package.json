@@ -10,10 +10,14 @@
 		"clean": "rm -rf node_modules .svelte-kit build dist",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"prettier": "prettier --plugin-search-dir . --check .",
+		"prettier:write": "prettier --plugin-search-dir . --write .",
+		"eslint": "eslint .",
+		"lint": "prettier --plugin-search-dir . --check . && eslint ."
 	},
 	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.38.0",
 		"@playwright/test": "^1.56.1",
 		"@sveltejs/adapter-static": "3.0.10",
 		"@sveltejs/kit": "^2.48.4",

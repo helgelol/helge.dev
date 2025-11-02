@@ -16,7 +16,7 @@
 			<Burger bind:open={opened} />
 		</div>
 		<div class="buttons">
-			{#each routes as route}
+			{#each routes as route (route.href)}
 				<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
 					>{route.label}</a
 				>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div class="responsiveButtons buttons">
-		{#each routes as route}
+		{#each routes as route (route.href)}
 			<a class={`button ${segment === route.href ? 'selected' : ''}`} href={route.href}
 				>{route.label}</a
 			>

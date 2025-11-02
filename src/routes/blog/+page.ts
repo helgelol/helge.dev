@@ -7,7 +7,7 @@ export async function load({ fetch }) {
 		devToArticles = await fetch(`${UserInfoEndpoint}helgelol`);
 
 		devToArticles = await devToArticles.json();
-	} catch (e) {
+	} catch {
 		throw error(404, 'Not found');
 	}
 

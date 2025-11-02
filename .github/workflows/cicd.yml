@@ -21,6 +21,12 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Code formatting
+        run: yarn prettier
+
+      - name: Code Linting
+        run: yarn eslint
+
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         id: playwright-cache
