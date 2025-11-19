@@ -1570,10 +1570,10 @@ svelte-icons@^2.1.0:
   resolved "https://registry.yarnpkg.com/svelte-icons/-/svelte-icons-2.1.0.tgz#6f2ec72f1d5c8b2de1a4b8a822c95bcb2f701aca"
   integrity sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==
 
-svelte@^5.43.11:
-  version "5.43.11"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.43.11.tgz#f97c08df0082f93512be333653c5fff86b2e3fed"
-  integrity sha512-jrAtflQFbCpaPS6BFDw/zz5W2BK0q3qXmnKX8vWuf5gaPuMefFh9zGIWFm2tDdmeK61rP+tF5rAx0V+C3Z7A3g==
+svelte@^5.43.12:
+  version "5.43.12"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.43.12.tgz#da903eca683dcc4208204a573358544712ba745f"
+  integrity sha512-d1R+3pFa39LXoHCsxHmV//D2pSFZlEMlnxCVQ54TlrQv+4o5pewJO0/Pc5MUp+j71PJrOrPJHTvREZJHn+ymDQ==
   dependencies:
     "@jridgewell/remapping" "^2.3.4"
     "@jridgewell/sourcemap-codec" "^1.5.0"
