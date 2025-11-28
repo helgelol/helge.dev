@@ -16,7 +16,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint ."
 	},
 	"devDependencies": {
-		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/eslintrc": "^3.3.3",
 		"@eslint/js": "^9.39.1",
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-static": "3.0.10",
