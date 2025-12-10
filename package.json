@@ -30,7 +30,7 @@
 		"eslint-plugin-svelte": "^3.13.1",
 		"prettier": "^3.7.4",
 		"prettier-plugin-svelte": "^3.4.0",
-		"sass": "^1.95.0",
+		"sass": "^1.95.1",
 		"svelte": "^5.45.8",
 		"svelte-check": "^4.3.4",
 		"svelte-icons": "^2.1.0",
