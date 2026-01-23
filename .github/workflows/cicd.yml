@@ -13,7 +13,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.10.0
-          # cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
@@ -27,17 +26,7 @@ jobs:
       - name: Code Linting
         run: yarn eslint
 
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        id: playwright-cache
-        with:
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/playwright.config.ts', '**/tests/**/*.spec.ts') }}
-          path: ~/.cache/ms-playwright
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-
       - name: Install Playwright Browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: yarn playwright install
 
       - name: Run Playwright tests
@@ -55,7 +44,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.10.0
-          # cache: 'yarn'
 
       - name: Install dependencies
         run: yarn
