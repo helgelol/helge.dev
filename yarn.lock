@@ -488,10 +488,10 @@
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-3.0.10.tgz#526ab78cd1d3a861dd0233e8ff34a204af40d595"
   integrity sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==
 
-"@sveltejs/kit@^2.50.2":
-  version "2.50.2"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.50.2.tgz#e2de28be859ccbdaf2792720fd8d3dc1a46b33df"
-  integrity sha512-875hTUkEbz+MyJIxWbQjfMaekqdmEKUUfR7JyKcpfMRZqcGyrO9Gd+iS1D/Dx8LpE5FEtutWGOtlAh4ReSAiOA==
+"@sveltejs/kit@^2.51.0":
+  version "2.51.0"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-2.51.0.tgz#c2ed07a1120dd73eaa42101adc34a3f67e06c100"
+  integrity sha512-BkcfxVVYmfxHGYLugemb7TWW+y/MNZbxXHXJ141lyyi2ozq0Q4kbqoV0cBGlh7F0vNtCMvfr7UPnxIaBjcP9gg==
   dependencies:
     "@standard-schema/spec" "^1.0.0"
     "@sveltejs/acorn-typescript" "^1.0.5"
@@ -546,6 +546,11 @@
   version "7.0.15"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
+
+"@types/trusted-types@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
+  integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
 
 "@typescript-eslint/eslint-plugin@^8.55.0":
   version "8.55.0"
@@ -1477,10 +1482,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^4.3.6:
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.3.6.tgz#fa4a87eba8239a4279de6b92f5052a69d8306f62"
-  integrity sha512-uBkz96ElE3G4pt9E1Tw0xvBfIUQkeH794kDQZdAUk795UVMr+NJZpuFSS62vcmO/DuSalK83LyOwhgWq8YGU1Q==
+svelte-check@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.4.0.tgz#6c0705c0a7c892fb349422c790417f4c1e89272d"
+  integrity sha512-gB3FdEPb8tPO3Y7Dzc6d/Pm/KrXAhK+0Fk+LkcysVtupvAh6Y/IrBCEZNupq57oh0hcwlxCUamu/rq7GtvfSEg==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
@@ -1505,15 +1510,16 @@ svelte-icons@^2.1.0:
   resolved "https://registry.yarnpkg.com/svelte-icons/-/svelte-icons-2.1.0.tgz#6f2ec72f1d5c8b2de1a4b8a822c95bcb2f701aca"
   integrity sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==
 
-svelte@^5.50.2:
-  version "5.50.2"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.50.2.tgz#fcc3a6d3c2ab7ffb5686c42245aada7888788335"
-  integrity sha512-WCxzm3BBf+Ase6RwiDPR4G36cM4Kb0NuhmLK6x44I+D6reaxizDDg8kBkk4jT/19+Rgmc44eZkOvMO6daoSFIw==
+svelte@^5.51.0:
+  version "5.51.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.51.0.tgz#fadd681d74123de2784ce884c0de53e52208fca4"
+  integrity sha512-TOtjs5SjPi1iCXJ7aHwQBY+PEyk0koIc1FCKNFyS9kQuN4FBma9nRuxM4f4A0b5SCdej812vf2Rcql2I0s9FZg==
   dependencies:
     "@jridgewell/remapping" "^2.3.4"
     "@jridgewell/sourcemap-codec" "^1.5.0"
     "@sveltejs/acorn-typescript" "^1.0.5"
     "@types/estree" "^1.0.5"
+    "@types/trusted-types" "^2.0.7"
     acorn "^8.12.1"
     aria-query "^5.3.1"
     axobject-query "^4.1.0"
