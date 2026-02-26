@@ -1476,10 +1476,10 @@ strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-svelte-check@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.4.3.tgz#70b7c9e00d2edaade33433fb80385b3d1fe404ab"
-  integrity sha512-4HtdEv2hOoLCEsSXI+RDELk9okP/4sImWa7X02OjMFFOWeSdFF3NFy3vqpw0z+eH9C88J9vxZfUXz/Uv2A1ANw==
+svelte-check@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-4.4.4.tgz#600dfa2146d5f446341f524d5e20fa64675d64cf"
+  integrity sha512-F1pGqXc710Oi/wTI4d/x7d6lgPwwfx1U6w3Q35n4xsC2e8C/yN2sM1+mWxjlMcpAfWucjlq4vPi+P4FZ8a14sQ==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.25"
     chokidar "^4.0.1"
