@@ -32,6 +32,7 @@ export default function Article() {
 										<FaSolidExternalLinkAlt />
 									</a>
 								</h1>
+								{/* eslint-disable-next-line solid/no-innerhtml */}
 								<div innerHTML={a().body_html} />
 							</>
 						)}

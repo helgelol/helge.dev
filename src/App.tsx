@@ -8,14 +8,13 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
-import { modalOpened, setModalOpened } from './lib/store';
 import { Email } from './lib/Constants';
 import { FaRegularCopy } from 'solid-icons/fa';
 import Tooltip from './components/Tooltip';
 import Button from './components/Button';
-import { createSignal } from 'solid-js';
+import { createSignal, ParentProps } from 'solid-js';
 
-function Layout(props: { children?: any }) {
+function Layout(props: ParentProps) {
 	const [copied, setCopied] = createSignal(false);
 
 	const copy = () => {

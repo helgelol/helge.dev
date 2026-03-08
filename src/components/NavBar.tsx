@@ -11,7 +11,8 @@ export default function NavBar() {
 	const location = useLocation();
 
 	createEffect(() => {
-		location.pathname; // track
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		location.pathname; // track for reactivity
 		setOpened(false);
 	});
 

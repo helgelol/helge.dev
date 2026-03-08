@@ -10,6 +10,7 @@ export default function Hamburger(props: HamburgerProps) {
 		<button
 			aria-label="menu-burger-button"
 			class={`hamburger${props.open ? ' open' : ''}`}
+			// eslint-disable-next-line solid/reactivity
 			onClick={props.onClick}
 		>
 			<svg width="32" height="24">

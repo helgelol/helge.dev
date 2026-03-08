@@ -12,9 +12,9 @@ export default function About() {
 					<h1>About</h1>
 					<p>
 						I'm is a seasoned software developer with over 15 years of experience. <br />
-						My journey in the software field spans years of hands-on experience and a rich background
-						in Software Development, Containers and Linux in both large enterprises and small
-						companies, either as a consultant or employee.
+						My journey in the software field spans years of hands-on experience and a rich
+						background in Software Development, Containers and Linux in both large enterprises and
+						small companies, either as a consultant or employee.
 					</p>
 					<h2>Skills</h2>
 					<For each={Object.entries(skills)}>
