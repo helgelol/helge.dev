@@ -1,5 +1,3 @@
-import { writable } from 'svelte/store';
+import { createSignal } from 'solid-js';
 
-export const modalOpened = writable(false);
-
-export const customBackground = writable('#349788');
+export const [modalOpened, setModalOpened] = createSignal(false);
