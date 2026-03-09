@@ -1,26 +1,19 @@
 .container {
 	width: 100%;
-	max-width: 900px;
-	display: flex;
-	justify-content: left;
-	/*box-sizing: border-box;*/
-	padding: 1em;
-	margin: 0 auto;
+	align-self: start;
 }
 
 .container main {
+	padding: 1em;
 	width: 100%;
-	max-width: 100%;
-	min-height: 500px;
 	text-align: left;
-	/*box-sizing: border-box;*/
+	align-items: flex-start;
 }
 
 .container h1 {
 	font-weight: 700;
 	margin: 0 0 50px 0;
 	font-size: 36px;
-	text-align: start;
 }
 
 .container h2 {
@@ -28,7 +21,7 @@
 }
 
 .list {
-	/*display: flex;*/
+	display: flex;
 	flex-direction: column;
 	gap: 30px;
 }
@@ -38,7 +31,7 @@
 		flex-direction: row;
 	}
 
-	.container main > h1 {
+	.container h1 {
 		font-size: 48px;
 	}
 }
