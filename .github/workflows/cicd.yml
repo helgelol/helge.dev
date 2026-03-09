@@ -6,53 +6,30 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Use Node.js 24.10.0
-        uses: actions/setup-node@v6
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run build
+      - run: bun run prettier
+      - run: bun run eslint
+      - run: bun run playwright install
+      - run: bun run e2e
+      - uses: actions/upload-artifact@v4
         with:
-          node-version: 24.10.0
-
-      - name: Install dependencies
-        run: yarn
-
-      - name: Build
-        run: yarn build
-
-      - name: Code formatting
-        run: yarn prettier
-
-      - name: Code Linting
-        run: yarn eslint
-
-      - name: Install Playwright Browsers
-        run: yarn playwright install
-
-      - name: Run Playwright tests
-        run: yarn e2e
+          name: build
+          path: build/
 
   deploy:
-    needs: build-test # needs previous job to be complete before starting this
-    if: github.ref == 'refs/heads/main' # Only run if branch is main
+    needs: build-test
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Use Node.js 24.10.0
-        uses: actions/setup-node@v6
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
         with:
-          node-version: 24.10.0
-
-      - name: Install dependencies
-        run: yarn
-
-      - name: Build
-        run: yarn build
-
-      - name: Deploy to Cloudflare
-        uses: cloudflare/wrangler-action@v3
+          name: build
+          path: build/
+      - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

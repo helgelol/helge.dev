@@ -19,7 +19,7 @@ main h1 {
 }
 
 main h2 {
-	line-height: 0;
+	margin-top: 0;
 	font-weight: 400;
 	font-size: 28px;
 }
