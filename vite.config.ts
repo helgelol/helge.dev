@@ -1,6 +1,7 @@
-import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import solid from 'vite-plugin-solid';
 
 export default defineConfig({
-	plugins: [sveltekit()]
+	plugins: [solid()],
+	build: { outDir: 'build' }
 });

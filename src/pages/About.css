@@ -1,0 +1,37 @@
+.container {
+	width: 100%;
+	align-self: start;
+}
+
+.container main {
+	padding: 1em;
+	width: 100%;
+	text-align: left;
+	align-items: flex-start;
+}
+
+.container h1 {
+	font-weight: 700;
+	margin: 0 0 50px 0;
+	font-size: 36px;
+}
+
+.container h2 {
+	margin-top: 50px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+@media (min-width: 900px) {
+	.list {
+		flex-direction: row;
+	}
+
+	.container h1 {
+		font-size: 48px;
+	}
+}

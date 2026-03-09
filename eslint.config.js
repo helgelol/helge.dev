@@ -1,73 +1,23 @@
-import { defineConfig } from 'eslint/config';
-import { FlatCompat } from '@eslint/eslintrc';
-import globals from 'globals';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 import tsParser from '@typescript-eslint/parser';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import sveltePlugin from 'eslint-plugin-svelte';
-import svelteParser from 'svelte-eslint-parser';
-import js from '@eslint/js';
-import prettier from 'eslint-config-prettier';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import solidPlugin from 'eslint-plugin-solid';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all
-});
-
-export default defineConfig([
+export default [
 	{
-		ignores: ['build/**', '.svelte-kit/**']
-	},
-	...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended'),
-	sveltePlugin.configs.recommended,
-
-	prettier,
-
-	{
-		files: ['**/*.{js,ts,cjs,mjs}'],
-
+		files: ['src/**/*.{ts,tsx}'],
 		languageOptions: {
 			parser: tsParser,
-			sourceType: 'module',
-			ecmaVersion: 2020,
 			parserOptions: {
-				extraFileExtensions: ['.svelte']
-			},
-
-			globals: {
-				...globals.browser,
-				...globals.node
+				project: './tsconfig.json'
 			}
 		},
-
 		plugins: {
-			'@typescript-eslint': typescriptEslint,
-			svelte: sveltePlugin
-		}
-	},
-
-	{
-		files: ['**/*.svelte'],
-
-		languageOptions: {
-			parser: svelteParser,
-
-			parserOptions: {
-				parser: '@typescript-eslint/parser'
-			},
-			globals: {
-				...globals.browser
-			}
+			'@typescript-eslint': tsPlugin,
+			solid: solidPlugin
 		},
 		rules: {
-			'svelte/no-compiler-warnings': 'off',
-			'svelte/no-navigation-without-resolve': 'off'
+			...tsPlugin.configs.recommended.rules,
+			...solidPlugin.configs.recommended.rules
 		}
 	}
-]);
+];

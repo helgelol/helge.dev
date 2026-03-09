@@ -1,0 +1,46 @@
+.hamburger {
+	color: white;
+	background: transparent;
+	border: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 20;
+	cursor: pointer;
+}
+
+.hamburger svg {
+	min-height: 24px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.hamburger svg line {
+	stroke: currentColor;
+	stroke-width: 3;
+	transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.open svg {
+	transform: scale(0.7);
+}
+
+.hamburger.open #top {
+	transform: translate(6px, 0px) rotate(45deg);
+}
+
+.hamburger.open #middle {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+	animation: fade 1s ease-in alternate forwards;
+}
+
+@keyframes fade {
+	to {
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 1000;
+	}
+}
+
+.hamburger.open #bottom {
+	transform: translate(-12px, 9px) rotate(-45deg);
+}
