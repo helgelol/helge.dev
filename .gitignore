@@ -30,6 +30,7 @@ dist-ssr
 .env.development
 public/build/
 .vscode/
+tmp
 
 
 # Typescript v1 declaration files
@@ -54,6 +55,8 @@ typings/
 
 # Mac files
 .DS_Store
+
+# Playwright
 /test-results/
 /playwright-report/
 /playwright/.cache/
