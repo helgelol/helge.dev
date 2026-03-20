@@ -17,7 +17,7 @@
 		"@solidjs/router": "^0.16.1",
 		"@typescript-eslint/eslint-plugin": "^8.57.1",
 		"@typescript-eslint/parser": "^8.57.1",
-		"eslint": "^10.0.3",
+		"eslint": "^10.1.0",
 		"eslint-plugin-solid": "^0.14.5",
 		"prettier": "^3.8.1",
 		"solid-icons": "^1.1.0",
