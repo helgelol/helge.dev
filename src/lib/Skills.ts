@@ -1,5 +1,5 @@
 const skills = {
-	programming: ['Svelte', 'TypeScript', 'Go', 'PHP'],
+	programming: ['Go', 'TypeScript', 'Svelte', 'PHP', 'Solid'],
 	devops: ['Kubernetes', 'Docker', 'Pipelines'],
 	databases: ['MySQL', 'Firebase'],
 	// tools: [],

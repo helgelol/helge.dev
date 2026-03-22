@@ -7,6 +7,7 @@
 	text-align: center;
 	padding: 1em;
 	margin: 0 auto;
+	overflow-wrap: break-word;
 }
 
 .note {
@@ -69,17 +70,7 @@
 .techsContainer {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
-}
-
-.techs {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.techs > div {
-	margin: 0 0 0 10px;
+	gap: 5px;
 }
 
 .projectContainer .button {

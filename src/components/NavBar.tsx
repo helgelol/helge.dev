@@ -1,4 +1,4 @@
-import { createSignal, createEffect } from 'solid-js';
+import { createSignal, createEffect, onCleanup } from 'solid-js';
 import { For } from 'solid-js';
 import { useLocation } from '@solidjs/router';
 import Hamburger from './Hamburger';
@@ -9,6 +9,7 @@ import './NavBar.css';
 export default function NavBar() {
 	const [opened, setOpened] = createSignal(false);
 	const location = useLocation();
+	let navRef: HTMLDivElement | undefined;
 
 	createEffect(() => {
 		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
@@ -16,10 +17,22 @@ export default function NavBar() {
 		setOpened(false);
 	});
 
+	createEffect(() => {
+		if (opened()) {
+			const handleClickOutside = (e: MouseEvent) => {
+				if (navRef && !navRef.contains(e.target as Node)) {
+					setOpened(false);
+				}
+			};
+			document.addEventListener('click', handleClickOutside);
+			onCleanup(() => document.removeEventListener('click', handleClickOutside));
+		}
+	});
+
 	const isActive = (href: string) => location.pathname === href;
 
 	return (
-		<div class={opened() ? 'NavBar open' : 'NavBar'}>
+		<div ref={navRef} class={opened() ? 'NavBar open' : 'NavBar'}>
 			<div class="innerContainer">
 				<a href="/">
 					<img src={Logo} alt="logo" class="logo" />
