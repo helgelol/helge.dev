@@ -1,10 +1,10 @@
 .container {
 	width: 100%;
 	align-self: start;
+	padding: 1em;
 }
 
 .container main {
-	padding: 1em;
 	width: 100%;
 	text-align: left;
 	align-items: flex-start;
@@ -27,6 +27,10 @@
 }
 
 @media (min-width: 900px) {
+	.container {
+		padding: 0;
+	}
+
 	.list {
 		flex-direction: row;
 	}

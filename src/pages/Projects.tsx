@@ -20,10 +20,8 @@ export default function Projects() {
 								<div class="header">
 									<h2>{project.title}</h2>
 									<div class="techsContainer">
-										Tech:
-										<div class="techs">
-											<For each={project.technologies}>{(tech) => <div>{tech}</div>}</For>
-										</div>
+										<span>Tech:</span>
+										<For each={project.technologies}>{(tech) => <span>{tech}</span>}</For>
 									</div>
 								</div>
 								<p>{project.description}</p>

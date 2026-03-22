@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<>
 			<Title>helge - main</Title>
-			<main>
+			<main class="home">
 				<h1>Helge Falch</h1>
 				<h2>Software Developer</h2>
 				<div class="icons">
