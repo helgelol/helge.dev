@@ -15,15 +15,15 @@
 		"@playwright/test": "^1.58.2",
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.16.1",
-		"@typescript-eslint/eslint-plugin": "^8.57.1",
-		"@typescript-eslint/parser": "^8.57.1",
+		"@typescript-eslint/eslint-plugin": "^8.57.2",
+		"@typescript-eslint/parser": "^8.57.2",
 		"eslint": "^10.1.0",
 		"eslint-plugin-solid": "^0.14.5",
 		"prettier": "^3.8.1",
 		"solid-icons": "^1.1.0",
 		"solid-js": "^1.9.7",
 		"typescript": "^5.9.3",
-		"vite": "^8.0.1",
+		"vite": "^8.0.2",
 		"vite-plugin-solid": "^2.11.11"
 	},
 	"type": "module"
