@@ -1,0 +1,600 @@
+/* Fullbleed: when /lineup is active, App.tsx adds `fullbleed` to <body>. Override the global
+   #root max-width and body padding so the lineup page fills the viewport. */
+body.fullbleed {
+	padding: 0 !important;
+	background: #00205c;
+	background-image: none;
+}
+body.fullbleed #root {
+	max-width: none;
+	min-height: 100dvh;
+}
+
+.lu-page {
+	--lu-navy: #00205c;
+	--lu-navy-2: #0a2d6e;
+	--lu-white: #ffffff;
+	--lu-line: rgba(255, 255, 255, 0.18);
+	--lu-line-strong: rgba(255, 255, 255, 0.45);
+	--lu-muted: rgba(255, 255, 255, 0.65);
+	--lu-danger: #ca3c25;
+	--lu-radius: 12px;
+	--lu-radius-sm: 8px;
+
+	width: 100%;
+	min-height: 100dvh;
+	background: var(--lu-navy);
+	padding: 14px 14px 32px;
+	margin: 0;
+	color: var(--lu-white);
+	box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+	.lu-page {
+		padding: 24px 32px 48px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.lu-page {
+		padding: 32px 64px 64px;
+	}
+}
+
+.lu-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-bottom: 1px solid var(--lu-line);
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+}
+
+.lu-logoBtn {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	display: inline-flex;
+}
+.lu-logo {
+	height: 48px;
+	width: auto;
+	display: block;
+}
+@media (min-width: 600px) {
+	.lu-logo {
+		height: 56px;
+	}
+}
+
+.lu-title {
+	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	flex: 1;
+}
+@media (min-width: 600px) {
+	.lu-title {
+		font-size: 1.75rem;
+	}
+}
+
+.lu-resetBtn {
+	background: transparent;
+	color: var(--lu-white);
+	border: 1px solid var(--lu-line);
+	border-radius: var(--lu-radius-sm);
+	padding: 6px 10px;
+	font-family: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+.lu-resetBtn:hover {
+	border-color: var(--lu-line-strong);
+}
+
+.lu-section {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.lu-h2 {
+	margin: 8px 0 4px;
+	font-size: 1.05rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--lu-muted);
+}
+
+.lu-muted {
+	color: var(--lu-muted);
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+/* Buttons */
+.lu-btn {
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 12px 18px;
+	border-radius: var(--lu-radius-sm);
+	cursor: pointer;
+	border: 1px solid transparent;
+	min-height: 44px;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	transition: transform 0.05s ease;
+}
+.lu-btn:active:not(:disabled) {
+	transform: translateY(1px);
+}
+.lu-btn:disabled {
+	opacity: 0.45;
+	cursor: not-allowed;
+}
+.lu-btnPrimary {
+	background: var(--lu-white);
+	color: var(--lu-navy);
+	border-color: var(--lu-white);
+}
+.lu-btnSecondary {
+	background: transparent;
+	color: var(--lu-white);
+	border-color: var(--lu-line-strong);
+}
+.lu-btnSecondary:hover:not(:disabled) {
+	border-color: var(--lu-white);
+}
+.lu-btnDanger {
+	background: var(--lu-danger);
+	color: var(--lu-white);
+	border-color: var(--lu-danger);
+}
+
+.lu-iconBtn {
+	background: transparent;
+	border: 1px solid var(--lu-line);
+	color: var(--lu-white);
+	width: 36px;
+	height: 36px;
+	border-radius: var(--lu-radius-sm);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 1rem;
+	flex-shrink: 0;
+}
+.lu-iconBtn:hover {
+	border-color: var(--lu-line-strong);
+}
+
+.lu-cta {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 8px;
+}
+.lu-ctaSplit {
+	justify-content: space-between;
+	gap: 8px;
+}
+
+/* Inputs */
+.lu-input {
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid var(--lu-line);
+	color: var(--lu-white);
+	border-radius: var(--lu-radius-sm);
+	padding: 10px 12px;
+	font-family: inherit;
+	font-size: 1rem;
+	min-height: 44px;
+	box-sizing: border-box;
+}
+.lu-input::placeholder {
+	color: var(--lu-muted);
+}
+.lu-input:focus {
+	outline: 2px solid var(--lu-white);
+	outline-offset: 1px;
+}
+
+/* Roster list */
+.lu-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.lu-listRow {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	background: var(--lu-navy-2);
+	border: 1px solid var(--lu-line);
+	border-radius: var(--lu-radius-sm);
+	padding: 6px 8px;
+}
+.lu-rowMain {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: transparent;
+	border: 0;
+	color: var(--lu-white);
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 8px 4px;
+	cursor: pointer;
+	min-height: 36px;
+	text-align: left;
+}
+.lu-rowNum {
+	font-variant-numeric: tabular-nums;
+	color: var(--lu-muted);
+	min-width: 36px;
+	font-size: 0.95rem;
+}
+.lu-rowName {
+	font-weight: 500;
+}
+.lu-editName {
+	flex: 1;
+}
+.lu-editNum {
+	width: 70px;
+}
+
+.lu-addRow {
+	display: flex;
+	gap: 8px;
+	align-items: stretch;
+}
+.lu-addName {
+	flex: 1;
+}
+.lu-addNum {
+	width: 70px;
+}
+
+/* Setup */
+.lu-setupControls {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 12px;
+	padding: 12px;
+	border: 1px solid var(--lu-line);
+	border-radius: var(--lu-radius-sm);
+	background: var(--lu-navy-2);
+}
+.lu-stepperGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	align-items: flex-start;
+}
+.lu-label {
+	font-size: 0.85rem;
+	color: var(--lu-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+.lu-stepper {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+.lu-stepBtn {
+	width: 36px;
+	height: 36px;
+	border-radius: var(--lu-radius-sm);
+	border: 1px solid var(--lu-line-strong);
+	background: transparent;
+	color: var(--lu-white);
+	font-size: 1.1rem;
+	cursor: pointer;
+	font-family: inherit;
+}
+.lu-stepVal {
+	min-width: 28px;
+	text-align: center;
+	font-variant-numeric: tabular-nums;
+	font-size: 1.1rem;
+}
+
+.lu-chipRow {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.lu-chip {
+	background: var(--lu-navy-2);
+	border: 1px solid var(--lu-line);
+	color: var(--lu-white);
+	border-radius: 999px;
+	padding: 8px 14px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 0.95rem;
+	min-height: 40px;
+}
+.lu-chip:hover {
+	border-color: var(--lu-line-strong);
+}
+.lu-chipSub {
+	background: rgba(255, 255, 255, 0.06);
+}
+.lu-chipLarge {
+	padding: 12px 18px;
+	font-size: 1.05rem;
+	min-height: 48px;
+}
+.lu-chipNum {
+	color: var(--lu-muted);
+	font-variant-numeric: tabular-nums;
+	font-size: 0.85rem;
+}
+.lu-chipName {
+	font-weight: 500;
+}
+
+.lu-slotRow {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+.lu-slotGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+	gap: 8px;
+}
+.lu-slot {
+	background: var(--lu-navy-2);
+	border: 1px solid var(--lu-line-strong);
+	border-radius: var(--lu-radius-sm);
+	color: var(--lu-white);
+	padding: 12px;
+	min-height: 64px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 2px;
+	cursor: pointer;
+	font-family: inherit;
+	text-align: left;
+}
+.lu-slotEmpty {
+	border-style: dashed;
+	border-color: var(--lu-line);
+	background: transparent;
+}
+.lu-slotGoalie {
+	border-color: var(--lu-white);
+	flex: 1;
+	min-width: 140px;
+}
+.lu-slotEmptyLabel {
+	color: var(--lu-muted);
+	font-size: 0.9rem;
+}
+.lu-slotNum {
+	color: var(--lu-muted);
+	font-size: 0.85rem;
+}
+.lu-slotName {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+/* Match */
+.lu-match {
+	gap: 18px;
+}
+
+.lu-timerBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 16px;
+	background: var(--lu-navy-2);
+	border: 1px solid var(--lu-line);
+	border-radius: var(--lu-radius-sm);
+}
+.lu-elapsed {
+	font-size: 3rem;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: 0.05em;
+	font-weight: 600;
+	line-height: 1;
+}
+@media (min-width: 600px) {
+	.lu-elapsed {
+		font-size: 4rem;
+	}
+}
+.lu-timerBtns {
+	display: flex;
+	gap: 8px;
+}
+
+.lu-subTimer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	padding: 12px;
+	background: var(--lu-navy-2);
+	border: 1px solid var(--lu-line);
+	border-radius: var(--lu-radius-sm);
+}
+.lu-subLabel {
+	color: var(--lu-muted);
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+.lu-subCountdown {
+	font-size: 2rem;
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+}
+@media (min-width: 600px) {
+	.lu-subCountdown {
+		font-size: 2.4rem;
+	}
+}
+
+@keyframes lu-flash {
+	0%,
+	100% {
+		background: var(--lu-navy-2);
+	}
+	50% {
+		background: var(--lu-danger);
+	}
+}
+.lu-subAlarm {
+	animation: lu-flash 0.7s ease-in-out infinite;
+	border-color: var(--lu-danger);
+}
+@media (prefers-reduced-motion: reduce) {
+	.lu-subAlarm {
+		animation: none;
+		background: var(--lu-danger);
+	}
+}
+
+.lu-fieldGoalies {
+	display: flex;
+	gap: 8px;
+}
+.lu-fieldGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 8px;
+}
+.lu-fieldCard {
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid var(--lu-line-strong);
+	border-radius: var(--lu-radius-sm);
+	color: var(--lu-white);
+	padding: 14px 12px;
+	min-height: 80px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+	cursor: pointer;
+	font-family: inherit;
+	text-align: left;
+}
+.lu-fieldCard:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.lu-fieldGoalie {
+	background: var(--lu-white);
+	color: var(--lu-navy);
+	border-color: var(--lu-white);
+	flex: 1;
+	min-width: 140px;
+}
+.lu-fieldRole {
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+.lu-fieldName {
+	font-weight: 600;
+	font-size: 1.05rem;
+	line-height: 1.2;
+}
+.lu-fieldNum {
+	font-size: 0.85rem;
+	opacity: 0.75;
+	font-variant-numeric: tabular-nums;
+}
+
+.lu-subsRow {
+	display: flex;
+	gap: 8px;
+	overflow-x: auto;
+	padding-bottom: 4px;
+	scrollbar-width: thin;
+}
+.lu-subsRow > * {
+	flex-shrink: 0;
+}
+
+/* Swap sheet */
+.lu-sheetBackdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	z-index: 50;
+	padding: 0;
+}
+@media (min-width: 600px) {
+	.lu-sheetBackdrop {
+		align-items: center;
+		padding: 24px;
+	}
+}
+.lu-sheet {
+	background: var(--lu-navy);
+	border: 1px solid var(--lu-line-strong);
+	border-bottom: 0;
+	border-radius: var(--lu-radius) var(--lu-radius) 0 0;
+	padding: 18px 18px 24px;
+	width: 100%;
+	max-width: 540px;
+	color: var(--lu-white);
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+@media (min-width: 600px) {
+	.lu-sheet {
+		border-bottom: 1px solid var(--lu-line-strong);
+		border-radius: var(--lu-radius);
+	}
+}
+.lu-sheetTitle {
+	margin: 0;
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+.lu-sheetName {
+	color: var(--lu-white);
+	background: rgba(255, 255, 255, 0.12);
+	padding: 2px 8px;
+	border-radius: 6px;
+}
+.lu-sheetGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 8px;
+}
+.lu-sheetCancel {
+	align-self: stretch;
+}
