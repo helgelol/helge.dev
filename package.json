@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.61.1",
 		"@solidjs/meta": "^0.29.4",
-		"@solidjs/router": "^0.16.1",
+		"@solidjs/router": "^0.16.2",
 		"@typescript-eslint/eslint-plugin": "^8.64.0",
 		"@typescript-eslint/parser": "^8.64.0",
 		"eslint": "^10.7.0",
