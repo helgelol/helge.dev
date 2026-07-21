@@ -19,7 +19,7 @@
 		"@typescript-eslint/parser": "^8.65.0",
 		"eslint": "^10.7.0",
 		"eslint-plugin-solid": "^0.14.5",
-		"prettier": "^3.9.5",
+		"prettier": "^3.9.6",
 		"solid-icons": "^1.1.0",
 		"solid-js": "^1.9.14",
 		"typescript": "^6.0.3",
