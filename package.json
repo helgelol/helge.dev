@@ -15,8 +15,8 @@
 		"@playwright/test": "^1.61.1",
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.16.2",
-		"@typescript-eslint/eslint-plugin": "^8.64.0",
-		"@typescript-eslint/parser": "^8.64.0",
+		"@typescript-eslint/eslint-plugin": "^8.65.0",
+		"@typescript-eslint/parser": "^8.65.0",
 		"eslint": "^10.7.0",
 		"eslint-plugin-solid": "^0.14.5",
 		"prettier": "^3.9.5",
@@ -24,7 +24,7 @@
 		"solid-js": "^1.9.14",
 		"typescript": "^6.0.3",
 		"vite": "^8.1.5",
-		"vite-plugin-solid": "^2.11.12"
+		"vite-plugin-solid": "^2.11.13"
 	},
 	"type": "module"
 }
