@@ -12,7 +12,7 @@
 		"clean": "rm -rf node_modules build dist test-results playwright-report"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.62.0",
+		"@playwright/test": "^1.62.1",
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.16.3",
 		"@typescript-eslint/eslint-plugin": "^8.65.0",
@@ -23,7 +23,7 @@
 		"solid-icons": "^1.1.0",
 		"solid-js": "^1.9.14",
 		"typescript": "^6.0.3",
-		"vite": "^8.1.5",
+		"vite": "^8.2.0",
 		"vite-plugin-solid": "^2.11.14"
 	},
 	"type": "module"
