@@ -17,13 +17,13 @@
 		"@solidjs/router": "^1.0.0",
 		"@typescript-eslint/eslint-plugin": "^8.67.0",
 		"@typescript-eslint/parser": "^8.67.0",
-		"eslint": "^10.8.1",
-		"eslint-plugin-solid": "^0.15.0",
+		"eslint": "^10.9.0",
+		"eslint-plugin-solid": "^0.16.0",
 		"prettier": "^3.9.6",
 		"solid-icons": "^1.1.0",
 		"solid-js": "^1.9.15",
 		"typescript": "^6.0.3",
-		"vite": "^8.2.1",
+		"vite": "^8.2.2",
 		"vite-plugin-solid": "^2.11.14"
 	},
 	"type": "module"
