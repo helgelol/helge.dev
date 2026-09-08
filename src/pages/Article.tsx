@@ -1,23 +1,22 @@
 import { Title } from '@solidjs/meta';
-import { Show, createResource } from 'solid-js';
+import { Loading, Show, createMemo } from 'solid-js';
 import { useParams } from '@solidjs/router';
 import { FaSolidExternalLinkAlt } from 'solid-icons/fa';
 import { ArticleEndPoint } from '../lib/Constants';
 import './Article.css';
 
+type DevArticle = { title: string; url: string; body_html: string };
+
 export default function Article() {
 	const params = useParams();
 
-	const [article] = createResource(
-		() => params.slug,
-		async (slug) => {
-			const res = await fetch(`${ArticleEndPoint}/${slug}`);
-			return res.ok ? res.json() : null;
-		}
-	);
+	const article = createMemo(async () => {
+		const res = await fetch(`${ArticleEndPoint}/${params.slug}`);
+		return res.ok ? ((await res.json()) as DevArticle) : null;
+	});
 
 	return (
-		<>
+		<Loading fallback={<div class="articleContainer" />}>
 			<Title>Helge — {article()?.title || 'Missing article'}</Title>
 			<div class="articleContainer">
 				<div class="article">
@@ -39,6 +38,6 @@ export default function Article() {
 					</Show>
 				</div>
 			</div>
-		</>
+		</Loading>
 	);
 }

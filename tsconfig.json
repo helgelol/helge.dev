@@ -12,7 +12,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"jsx": "preserve",
-		"jsxImportSource": "solid-js",
+		"jsxImportSource": "@solidjs/web",
 		"paths": {
 			"$lib/*": ["./src/lib/*"],
 			"$assets/*": ["./src/assets/*"]

@@ -1,5 +1,5 @@
 import { Title } from '@solidjs/meta';
-import { For, Show, createResource } from 'solid-js';
+import { For, Loading, Show, createMemo } from 'solid-js';
 import { UserInfoEndpoint } from '../lib/Constants';
 import './Blog.css';
 
@@ -15,15 +15,14 @@ interface Article {
 const blackListedArticles = [422939];
 
 export default function Blog() {
-	const [articles] = createResource(async () => {
+	const articles = createMemo(async () => {
 		const res = await fetch(`${UserInfoEndpoint}helgelol`);
-		return res.json() as Promise<Article[]>;
+		return (await res.json()) as Article[];
 	});
 
-	const filteredArticles = () => {
-		const data = articles() ?? [];
-		return data.filter((a: Article) => !blackListedArticles.includes(a?.id));
-	};
+	const filteredArticles = createMemo(() =>
+		articles().filter((a: Article) => !blackListedArticles.includes(a?.id))
+	);
 
 	return (
 		<>
@@ -31,26 +30,28 @@ export default function Blog() {
 			<div class="articlesContainer">
 				<div class="articles">
 					<h1>Articles</h1>
-					<For each={filteredArticles()}>
-						{(article: Article) => (
-							<div class="article">
-								<div class="header">
-									<h2>{article.title}</h2>
-									<div>Tags: {article.tags || article.category}</div>
+					<Loading fallback={<div>Loading…</div>}>
+						<For each={filteredArticles()}>
+							{(article: Article) => (
+								<div class="article">
+									<div class="header">
+										<h2>{article.title}</h2>
+										<div>Tags: {article.tags || article.category}</div>
+									</div>
+									<p>{article.description || ''}</p>
+									<a
+										href={article.id ? `/blog/${article.id}` : article.link}
+										target={!article.id ? '_blank' : '_self'}
+									>
+										<div class="button">Read Article =&gt;</div>
+									</a>
 								</div>
-								<p>{article.description || ''}</p>
-								<a
-									href={article.id ? `/blog/${article.id}` : article.link}
-									target={!article.id ? '_blank' : '_self'}
-								>
-									<div class="button">Read Article =&gt;</div>
-								</a>
-							</div>
-						)}
-					</For>
-					<Show when={!articles.loading && filteredArticles().length === 0}>
-						<div>No Articles yet.</div>
-					</Show>
+							)}
+						</For>
+						<Show when={filteredArticles().length === 0}>
+							<div>No Articles yet.</div>
+						</Show>
+					</Loading>
 				</div>
 			</div>
 		</>

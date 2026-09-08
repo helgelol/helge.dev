@@ -1,4 +1,4 @@
-import { createSignal, createEffect, onCleanup } from 'solid-js';
+import { createSignal, createEffect } from 'solid-js';
 import { For } from 'solid-js';
 import { useLocation } from '@solidjs/router';
 import Hamburger from './Hamburger';
@@ -11,22 +11,24 @@ export default function NavBar() {
 	const location = useLocation();
 	let navRef: HTMLDivElement | undefined;
 
-	createEffect(() => {
-		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-		location.pathname; // track for reactivity
-		setOpened(false);
-	});
-
-	createEffect(() => {
-		if (opened()) {
-			const handleClickOutside = (e: MouseEvent) => {
-				if (navRef && !navRef.contains(e.target as Node)) {
-					setOpened(false);
-				}
-			};
-			document.addEventListener('click', handleClickOutside);
-			onCleanup(() => document.removeEventListener('click', handleClickOutside));
+	// Close on navigation: the compute phase tracks, the apply phase writes.
+	createEffect(
+		() => location.pathname,
+		() => {
+			// Block body on purpose: an apply phase's return value is its cleanup.
+			setOpened(false);
 		}
+	);
+
+	// Click-outside listener, mounted only while open. The apply phase returns its
+	// own teardown, replacing onCleanup-inside-an-effect.
+	createEffect(opened, (isOpen) => {
+		if (!isOpen) return;
+		const handleClickOutside = (e: MouseEvent) => {
+			if (navRef && !navRef.contains(e.target as Node)) setOpened(false);
+		};
+		document.addEventListener('click', handleClickOutside);
+		return () => document.removeEventListener('click', handleClickOutside);
 	});
 
 	const isActive = (href: string) => location.pathname === href;

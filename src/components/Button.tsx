@@ -1,4 +1,4 @@
-import { JSX } from 'solid-js';
+import { JSX } from '@solidjs/web';
 import { Email } from '../lib/Constants';
 import './Button.css';
 

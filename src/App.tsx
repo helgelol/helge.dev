@@ -1,5 +1,4 @@
-import { Router, Route, useLocation } from '@solidjs/router';
-import { MetaProvider } from '@solidjs/meta';
+import { createRouter } from '@solidjs/router';
 import NavBar from './components/NavBar';
 import Modal from './components/Modal';
 import './App.css';
@@ -8,22 +7,24 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
-import Lineup from './pages/Lineup';
 import { Email } from './lib/Constants';
 import { FaRegularCopy } from 'solid-icons/fa';
 import Tooltip from './components/Tooltip';
 import Button from './components/Button';
-import { createEffect, createSignal, ParentProps, Show } from 'solid-js';
+import { createSignal, ParentProps } from 'solid-js';
+
+const Router = createRouter({
+	routes: [
+		{ path: '/', component: Home },
+		{ path: '/projects', component: Projects },
+		{ path: '/about', component: About },
+		{ path: '/blog', component: Blog },
+		{ path: '/blog/:slug', component: Article }
+	]
+});
 
 function Layout(props: ParentProps) {
 	const [copied, setCopied] = createSignal(false);
-	const location = useLocation();
-	const isFullbleed = () => location.pathname.startsWith('/lineup');
-
-	createEffect(() => {
-		if (typeof document === 'undefined') return;
-		document.body.classList.toggle('fullbleed', isFullbleed());
-	});
 
 	const copy = () => {
 		window.navigator.clipboard.writeText(Email);
@@ -62,30 +63,15 @@ function Layout(props: ParentProps) {
 					<Button>Send Email</Button>
 				</div>
 			</Modal>
-			<Show when={!isFullbleed()}>
-				<NavBar />
-			</Show>
+			<NavBar />
 			{props.children}
-			<Show when={!isFullbleed()}>
-				<footer>
-					made with <a href="https://www.solidjs.com/">solidjs</a> ❤️
-				</footer>
-			</Show>
+			<footer>
+				made with <a href="https://www.solidjs.com/">solidjs</a> ❤️
+			</footer>
 		</>
 	);
 }
 
 export default function App() {
-	return (
-		<MetaProvider>
-			<Router root={Layout}>
-				<Route path="/" component={Home} />
-				<Route path="/projects" component={Projects} />
-				<Route path="/about" component={About} />
-				<Route path="/blog" component={Blog} />
-				<Route path="/blog/:slug" component={Article} />
-				<Route path="/lineup" component={Lineup} />
-			</Router>
-		</MetaProvider>
-	);
+	return <Router>{(routeProps) => <Layout>{routeProps.children}</Layout>}</Router>;
 }

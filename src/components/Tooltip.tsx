@@ -1,4 +1,4 @@
-import { JSX } from 'solid-js';
+import { JSX } from '@solidjs/web';
 import './Tooltip.css';
 
 interface TooltipProps {
