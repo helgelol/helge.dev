@@ -1,4 +1,5 @@
-import { JSX, Show, createSignal } from 'solid-js';
+import { Show, createSignal } from 'solid-js';
+import { JSX } from '@solidjs/web';
 import { modalOpened, setModalOpened } from '../lib/store';
 import './Modal.css';
 
