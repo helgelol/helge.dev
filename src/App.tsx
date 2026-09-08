@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Article from './pages/Article';
+import NotFound from './pages/NotFound';
 import { Email } from './lib/Constants';
 import { FaRegularCopy } from 'solid-icons/fa';
 import Tooltip from './components/Tooltip';
@@ -19,7 +20,8 @@ const Router = createRouter({
 		{ path: '/projects', component: Projects },
 		{ path: '/about', component: About },
 		{ path: '/blog', component: Blog },
-		{ path: '/blog/:slug', component: Article }
+		{ path: '/blog/:slug', component: Article },
+		{ path: '*404', component: NotFound }
 	]
 });
 

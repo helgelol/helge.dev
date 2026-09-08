@@ -140,6 +140,36 @@ test.describe('Blog Page', () => {
 	});
 });
 
+test.describe('Not Found', () => {
+	for (const path of ['/definitely-not-a-real-path', '/lineup', '/blog/x/y/z']) {
+		test(`renders the 404 page on ${path}`, async ({ page }) => {
+			await page.goto(path);
+			await expect(page).toHaveTitle('helge - not found');
+			await expect(page.getByRole('heading', { name: '404' })).toBeVisible();
+			await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
+		});
+	}
+
+	test('keeps the nav and footer', async ({ page }) => {
+		await page.goto('/definitely-not-a-real-path');
+		await expect(page.locator('.NavBar')).toBeVisible();
+		await expect(page.getByRole('link', { name: 'solidjs' })).toBeVisible();
+	});
+
+	test('back link returns to the home page', async ({ page }) => {
+		await page.goto('/definitely-not-a-real-path');
+		// scoped to main: the NavBar also has a Home link
+		await page.locator('main.home a').click();
+		await expect(page).toHaveTitle('helge - main');
+		await expect(page.getByRole('heading', { name: 'Helge Falch' })).toBeVisible();
+	});
+
+	test('real routes still win over the catch-all', async ({ page }) => {
+		await page.goto('/projects');
+		await expect(page).toHaveTitle('helge - projects');
+	});
+});
+
 test.describe('Footer', () => {
 	for (const path of ['/', '/projects', '/about', '/blog']) {
 		test(`is visible on ${path}`, async ({ page }) => {
