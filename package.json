@@ -25,7 +25,7 @@
 		"solid-icons": "^1.1.0",
 		"solid-js": "^2.0.0-rc.7",
 		"typescript": "^6.0.3",
-		"vite": "^8.2.2"
+		"vite": "^8.3.0"
 	},
 	"type": "module"
 }
