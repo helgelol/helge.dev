@@ -16,7 +16,7 @@
         "eslint-plugin-solid": "^0.18.0",
         "prettier": "^3.9.8",
         "solid-icons": "^1.1.0",
-        "solid-js": "^2.0.0-rc.8",
+        "solid-js": "^2.0.0-rc.9",
         "typescript": "^6.0.3",
         "vite": "^8.3.0",
       },
@@ -165,7 +165,7 @@
 
     "@solidjs/router": ["@solidjs/router@2.0.0-next.24", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.8", "solid-js": "^2.0.0-rc.8" } }, "sha512-E+Ihm/qoJriDcShKzRkcljJC7dkphUZPk9dFMeyhe0RpOw6Stifuznt6+ZLxD5S2lwAGRlLB4/btAjNJh/qkbw=="],
 
-    "@solidjs/signals": ["@solidjs/signals@2.0.0-rc.8", "", {}, "sha512-EGk9WkxnlQtqdERjPgS8gvWVjKLZnBQr95e65FOAs9MqkxVhHIjgipan7svZZ6n0rkp6vSc9GxyeY836boaT6w=="],
+    "@solidjs/signals": ["@solidjs/signals@2.0.0-rc.9", "", {}, "sha512-o3pqiTgpH5NR2DstiKrt9s/6+0YOFtv+MfvLONwLsS247I+EWMMyTu9BkRcgd35UR5Pa1DM16lI1/5uaIMY6Gw=="],
 
     "@solidjs/vite-plugin": ["@solidjs/vite-plugin@3.0.0-next.43", "", { "dependencies": { "@ampproject/remapping": "^2.3.0", "@babel/core": "^7.23.3", "@solidjs/babel-plugin": "^2.0.0-rc.8", "@solidjs/compiler": "^2.0.0-rc.8", "@types/babel__core": "^7.20.4", "merge-anything": "^5.1.7", "vitefu": "^1.0.4" }, "peerDependencies": { "@solidjs/start-devtools": "^1.0.0-next.2", "@solidjs/web": "^2.0.0-rc.7", "@testing-library/jest-dom": "^5.16.6 || ^5.17.0 || ^6.0.0 || ^7.0.0", "solid-js": "^2.0.0-rc.7", "vite": "^8.0.0 || ^9.0.0" }, "optionalPeers": ["@solidjs/start-devtools", "@testing-library/jest-dom"] }, "sha512-7RNL9O3gzblgrGUJU5snRzC9AYAq285qoaSpi47kIXGDkKLDgIsjXfdElXM40w4SdP7mWLterhXYnA6M8CPXkg=="],
 
@@ -411,7 +411,7 @@
 
     "solid-icons": ["solid-icons@1.2.0", "", {}, "sha512-yjQxWQMi9l19P5Af9vjsvalTMDFPDL4XD6etrUdNxNVhFp1bMYF0SFwUa5VYDfJ7u0SF3Qkz/F7BZxqcLUwklw=="],
 
-    "solid-js": ["solid-js@2.0.0-rc.8", "", { "dependencies": { "@solidjs/signals": "^2.0.0-rc.8", "csstype": "^3.1.0", "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" } }, "sha512-0DwASKxvwXWAxCiea71cN3bmsyBIOUGmmg/pjSfhxPg+2pBVCh/ZKmwLNjKlPjc8SHeu52ZTio6tBBp1TcPB8A=="],
+    "solid-js": ["solid-js@2.0.0-rc.9", "", { "dependencies": { "@solidjs/signals": "^2.0.0-rc.9", "csstype": "^3.1.0", "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" } }, "sha512-J/oHWnWqe7S0FeIEdIRKDvyyo+HY/TYKr2PrIB8VlePMWuErDg78QHqdsAV7f6HKa9qhWR/23eqzR/ZRV9ep0g=="],
 
     "source-map-js": ["source-map-js@1.2.1", "", {}, "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="],
 
