@@ -9,6 +9,11 @@ updates:
     schedule:
       interval: 'daily'
     groups:
+      # Solid 2 RC packages import each other's internals; a lone bump breaks the build.
+      solid:
+        patterns:
+          - 'solid-js'
+          - '@solidjs/*'
       updates:
         patterns:
           - '*'
