@@ -7,7 +7,7 @@
       "devDependencies": {
         "@playwright/test": "^1.63.0",
         "@solidjs/meta": "^1.0.0-next.2",
-        "@solidjs/router": "^2.0.0-next.26",
+        "@solidjs/router": "^2.0.0-next.30",
         "@solidjs/vite-plugin": "^3.0.0-next.44",
         "@solidjs/web": "^2.0.0-rc.9",
         "@typescript-eslint/eslint-plugin": "^8.70.1",
@@ -163,7 +163,7 @@
 
     "@solidjs/meta": ["@solidjs/meta@1.0.0-next.2", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.0", "solid-js": "^2.0.0-rc.0" } }, "sha512-4aqPczFqDdep4JTAUXfh4nyfq7InbTgimd7NuN6ZWWE29UPv0uR5dyr53yFcf2YgVXjFdX+JGhXtsE0njGL+fA=="],
 
-    "@solidjs/router": ["@solidjs/router@2.0.0-next.26", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.9", "solid-js": "^2.0.0-rc.9" } }, "sha512-Zjho0HI095mxSMu8tyfuqoq8vTeYML0mWJj1iQar298MrhtT2itGiEgF2C7ndE2mzKeXRQ/DLf1tr37Gax5bsg=="],
+    "@solidjs/router": ["@solidjs/router@2.0.0-next.30", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.9", "filesystem-routing": ">=0.4.0", "solid-js": "^2.0.0-rc.9" }, "optionalPeers": ["filesystem-routing"] }, "sha512-Nl7i8Y00yn8HAQBc34WtJYabvzNK6t35lb2sXqBQKCBL6qrBGbSFXFUeakyRA8Toh0gErWcDsKTMEGeyozTJkQ=="],
 
     "@solidjs/signals": ["@solidjs/signals@2.0.0-rc.9", "", {}, "sha512-o3pqiTgpH5NR2DstiKrt9s/6+0YOFtv+MfvLONwLsS247I+EWMMyTu9BkRcgd35UR5Pa1DM16lI1/5uaIMY6Gw=="],
 
