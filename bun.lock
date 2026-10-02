@@ -7,16 +7,16 @@
       "devDependencies": {
         "@playwright/test": "^1.63.0",
         "@solidjs/meta": "^1.0.0-next.2",
-        "@solidjs/router": "^2.0.0-next.30",
+        "@solidjs/router": "^2.0.0-next.31",
         "@solidjs/vite-plugin": "^3.0.0-next.46",
-        "@solidjs/web": "^2.0.0-rc.10",
+        "@solidjs/web": "^2.0.0-rc.11",
         "@typescript-eslint/eslint-plugin": "^8.71.0",
         "@typescript-eslint/parser": "^8.71.0",
         "eslint": "^10.11.0",
         "eslint-plugin-solid": "^0.18.0",
         "prettier": "^3.9.9",
         "solid-icons": "^1.1.0",
-        "solid-js": "^2.0.0-rc.10",
+        "solid-js": "^2.0.0-rc.11",
         "typescript": "^6.0.3",
         "vite": "^8.3.1",
       },
@@ -163,13 +163,13 @@
 
     "@solidjs/meta": ["@solidjs/meta@1.0.0-next.2", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.0", "solid-js": "^2.0.0-rc.0" } }, "sha512-4aqPczFqDdep4JTAUXfh4nyfq7InbTgimd7NuN6ZWWE29UPv0uR5dyr53yFcf2YgVXjFdX+JGhXtsE0njGL+fA=="],
 
-    "@solidjs/router": ["@solidjs/router@2.0.0-next.30", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.9", "filesystem-routing": ">=0.4.0", "solid-js": "^2.0.0-rc.9" }, "optionalPeers": ["filesystem-routing"] }, "sha512-Nl7i8Y00yn8HAQBc34WtJYabvzNK6t35lb2sXqBQKCBL6qrBGbSFXFUeakyRA8Toh0gErWcDsKTMEGeyozTJkQ=="],
+    "@solidjs/router": ["@solidjs/router@2.0.0-next.31", "", { "peerDependencies": { "@solidjs/web": "^2.0.0-rc.10", "filesystem-routing": ">=0.4.0", "solid-js": "^2.0.0-rc.10" }, "optionalPeers": ["filesystem-routing"] }, "sha512-ADeyi2Yvfx0xQNqOtvbyJ1dIg9SB2vmr4d539fpLzFiDeBKoAYaE0c/lM5aWDRIv0PV9adzpISykutZqhZfz2w=="],
 
     "@solidjs/signals": ["@solidjs/signals@2.0.0-rc.13", "", {}, "sha512-4+pRdrAHtfyE9BUJWBup3TpzJojJjgW2mV1vm/Jik4tWa5epxXB/YrLkwqP1v8+S9XjyKKZu5BSLqmcpswMYeQ=="],
 
     "@solidjs/vite-plugin": ["@solidjs/vite-plugin@3.0.0-next.46", "", { "dependencies": { "@ampproject/remapping": "^2.3.0", "@babel/core": "^7.23.3", "@solidjs/babel-plugin": "^2.0.0-rc.10", "@solidjs/compiler": "^2.0.0-rc.10", "@types/babel__core": "^7.20.4", "merge-anything": "^5.1.7", "vitefu": "^1.0.4" }, "peerDependencies": { "@solidjs/start-devtools": "^1.0.0-next.2", "@solidjs/web": "^2.0.0-rc.10", "@testing-library/jest-dom": "^5.16.6 || ^5.17.0 || ^6.0.0 || ^7.0.0", "solid-js": "^2.0.0-rc.10", "vite": "^8.0.0 || ^9.0.0" }, "optionalPeers": ["@solidjs/start-devtools", "@testing-library/jest-dom"] }, "sha512-iKVgtv5xroO6FgNkt6jYQYUsjlk6luv4EsXuSwzSP1Wslj9tKN7X9bWMHBq9EtlOtNCTRb+e579mmL+6c1xkpw=="],
 
-    "@solidjs/web": ["@solidjs/web@2.0.0-rc.10", "", { "dependencies": { "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" }, "peerDependencies": { "solid-js": "^2.0.0-rc.10" } }, "sha512-CHXXV5BtqUkuxz/AM45WUKCYF/OiBhC6fOe9gyiktES2bpKj6SUL2xxIciM7q7G+ewYXAN/SGy1/SNFSrxjrOQ=="],
+    "@solidjs/web": ["@solidjs/web@2.0.0-rc.11", "", { "dependencies": { "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" }, "peerDependencies": { "solid-js": "^2.0.0-rc.11" } }, "sha512-/olwnP/328cFk7DU8LWicmzaTDs+/OlqLUhYewwy3kMEoQ3Oz3QJXwA4XAZPTheU7i4ozJhxBo0pEIpXQKlNng=="],
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.3", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg=="],
 
@@ -411,7 +411,7 @@
 
     "solid-icons": ["solid-icons@1.2.0", "", {}, "sha512-yjQxWQMi9l19P5Af9vjsvalTMDFPDL4XD6etrUdNxNVhFp1bMYF0SFwUa5VYDfJ7u0SF3Qkz/F7BZxqcLUwklw=="],
 
-    "solid-js": ["solid-js@2.0.0-rc.10", "", { "dependencies": { "@solidjs/signals": "^2.0.0-rc.10", "csstype": "^3.1.0", "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" } }, "sha512-eh25kmg7yXuJCVN2VpS03bUuTJ0rvb7MnJyIw+8tcSRwnINaugyI5RLwPMy9Rji94CqsMbDrD9Ixh9bRuBMwwQ=="],
+    "solid-js": ["solid-js@2.0.0-rc.11", "", { "dependencies": { "@solidjs/signals": "^2.0.0-rc.11", "csstype": "^3.1.0", "seroval": "~1.6.7", "seroval-plugins": "~1.6.7" } }, "sha512-qGWn8AOSL/KIwipmr1J5YZnr0LFXcQx01BlPsFuFWEiOhRstP2/E8Jf9L8mlDDNpfPDBqp3QUSVvq3xEWg3GBg=="],
 
     "source-map-js": ["source-map-js@1.2.1", "", {}, "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="],
 
