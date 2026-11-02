@@ -19,7 +19,7 @@
 		"@solidjs/web": "^2.0.0-rc.19",
 		"@typescript-eslint/eslint-plugin": "^8.72.1",
 		"@typescript-eslint/parser": "^8.72.1",
-		"eslint": "^10.13.0",
+		"eslint": "^10.14.0",
 		"eslint-plugin-solid": "^0.18.1",
 		"prettier": "^3.9.10",
 		"solid-icons": "^1.1.0",
