@@ -15,7 +15,7 @@
         "eslint": "^10.15.0",
         "eslint-plugin-solid": "^0.20.1",
         "prettier": "^3.10.1",
-        "solid-icons": "^1.1.0",
+        "solid-icons": "^2.0.0",
         "solid-js": "^2.0.3",
         "typescript": "^6.0.3",
         "vite": "^8.3.8",
@@ -341,7 +341,7 @@
 
     "shebang-regex": ["shebang-regex@3.0.0", "", {}, "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A=="],
 
-    "solid-icons": ["solid-icons@1.2.0", "", {}, "sha512-yjQxWQMi9l19P5Af9vjsvalTMDFPDL4XD6etrUdNxNVhFp1bMYF0SFwUa5VYDfJ7u0SF3Qkz/F7BZxqcLUwklw=="],
+    "solid-icons": ["solid-icons@2.0.0", "", { "peerDependencies": { "solid-js": ">=1.7.0 || ^2.0.0" } }, "sha512-18EVoC5hM3aC9FJ/5H+3DTymRNiRjpMYbbdgok4G+L3/aWTyWZ4IoKcOfF3Um4v0I0CdnlI2t4lP8hqU6ENS+Q=="],
 
     "solid-js": ["solid-js@2.0.3", "", { "dependencies": { "@solidjs/signals": "^2.0.3", "seroval": "^1.8.0", "seroval-plugins": "^1.8.0" } }, "sha512-XOHstv+GAJjfcSGZU9xfX5q6Mbqmv72IcdWh2JuMx3KvBbfpQPdy/Yl00A1ouk7A0etjqhNe799CPdr6i7koWg=="],
 

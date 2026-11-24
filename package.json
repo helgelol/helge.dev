@@ -22,7 +22,7 @@
 		"eslint": "^10.15.0",
 		"eslint-plugin-solid": "^0.20.1",
 		"prettier": "^3.10.1",
-		"solid-icons": "^1.1.0",
+		"solid-icons": "^2.0.0",
 		"solid-js": "^2.0.3",
 		"typescript": "^6.0.3",
 		"vite": "^8.3.8"
